@@ -1,0 +1,19 @@
+{
+ "judge_a": "qwen2.5:7b",
+ "judge_b": "openrouter:google/gemini-2.5-flash",
+ "faithfulness": {
+  "paired_items": 22,
+  "mean_a": 0.676,
+  "mean_b": 0.537,
+  "mean_absolute_difference": 0.288,
+  "pearson_r": -0.074,
+  "within_0_25": 0.591
+ },
+ "psc": {
+  "paired_answers": 9,
+  "psc_a": 0.222,
+  "psc_b": 0.333,
+  "raw_agreement": 0.667,
+  "cohens_kappa": 0.182
+ }
+}

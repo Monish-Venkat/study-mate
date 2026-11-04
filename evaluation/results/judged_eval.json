@@ -1,0 +1,621 @@
+{
+ "summary": {
+  "judge_model": "qwen2.5:7b",
+  "generator_model": "qwen2.5:3b",
+  "judge_is_same_family": true,
+  "faithfulness_items": 22,
+  "mean_faithfulness": 0.699,
+  "mean_relevancy": 0.811,
+  "mean_statements_per_answer": 4.455,
+  "audit_vs_judge_grounding": {
+   "lexical_audit": 0.792,
+   "judge_faithfulness": 0.699
+  },
+  "persona_educator": "Walter Lewin (MIT 8.02)",
+  "persona_questions": 12,
+  "persona_questions_from_benchmark": 3,
+  "persona_questions_authored": 9,
+  "persona_applied": 9,
+  "psc_judged": 9,
+  "psc": 0.556,
+  "standard_vs_persona": {
+   "faithfulness_standard": 0.693,
+   "faithfulness_persona": 0.652,
+   "relevancy_standard": 0.808,
+   "relevancy_persona": 0.8,
+   "audit_standard": 0.945,
+   "audit_persona": 0.95,
+   "chars_standard": 1358.333,
+   "chars_persona": 1842.75
+  },
+  "tam": "not produced: TAM requires human participants",
+  "minutes": 43.9
+ },
+ "faithfulness_rows": [
+  {
+   "id": "phys-PUC1-0000",
+   "refused": false,
+   "judge": {
+    "statements": 5,
+    "supported": 3,
+    "faithfulness": 0.6,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 1.0,
+   "passages": 1
+  },
+  {
+   "id": "phys-PUC1-0001",
+   "refused": false,
+   "judge": {
+    "statements": 5,
+    "supported": 4,
+    "faithfulness": 0.8,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.88,
+   "passages": 4
+  },
+  {
+   "id": "phys-PUC1-0002",
+   "refused": false,
+   "judge": {
+    "statements": 7,
+    "supported": 5,
+    "faithfulness": 0.714,
+    "relevancy": 0.85
+   },
+   "audit_grounded": 0.89,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0003",
+   "refused": true
+  },
+  {
+   "id": "phys-PUC1-0004",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.83,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0005",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 2,
+    "faithfulness": 0.5,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.73,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0006",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 2,
+    "faithfulness": 0.5,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 1.0,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0007",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.75,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0008",
+   "refused": false,
+   "judge": {
+    "statements": 9,
+    "supported": 6,
+    "faithfulness": 0.667,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 1.0,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0009",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 1.0,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0010",
+   "refused": false,
+   "judge": {
+    "statements": 5,
+    "supported": 3,
+    "faithfulness": 0.6,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.9,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0011",
+   "refused": false,
+   "judge": {
+    "statements": 3,
+    "supported": 2,
+    "faithfulness": 0.667,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.83,
+   "passages": 1
+  },
+  {
+   "id": "phys-PUC1-0012",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 2,
+    "faithfulness": 0.5,
+    "relevancy": 0.7
+   },
+   "audit_grounded": 0.4,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0013",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 1.0,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0014",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.64,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0015",
+   "refused": false,
+   "judge": {
+    "statements": 2,
+    "supported": 2,
+    "faithfulness": 1.0,
+    "relevancy": 1.0
+   },
+   "audit_grounded": 0.2,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0016",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 1.0,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0017",
+   "refused": false,
+   "judge": {
+    "statements": 6,
+    "supported": 4,
+    "faithfulness": 0.667,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.86,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0018",
+   "refused": false,
+   "judge": {
+    "statements": 2,
+    "supported": 2,
+    "faithfulness": 1.0,
+    "relevancy": 1.0
+   },
+   "audit_grounded": 0.4,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC1-0019",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 2,
+    "faithfulness": 0.5,
+    "relevancy": 0.7
+   },
+   "audit_grounded": 0.77,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC2-0020",
+   "refused": true
+  },
+  {
+   "id": "phys-PUC2-0021",
+   "refused": false,
+   "judge": {
+    "statements": 6,
+    "supported": 4,
+    "faithfulness": 0.667,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.77,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC2-0022",
+   "refused": true
+  },
+  {
+   "id": "phys-PUC2-0023",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.67,
+   "passages": 3
+  },
+  {
+   "id": "phys-PUC2-0024",
+   "refused": false,
+   "judge": {
+    "statements": 4,
+    "supported": 3,
+    "faithfulness": 0.75,
+    "relevancy": 0.8
+   },
+   "audit_grounded": 0.9,
+   "passages": 3
+  }
+ ],
+ "persona_rows": [
+  {
+   "question": "Give any two properties of electric field lines.",
+   "persona_applied": true,
+   "psc_consistent": false,
+   "psc_reason": "no flux, field line discussion",
+   "standard": {
+    "judge": {
+     "statements": 2,
+     "supported": 2,
+     "faithfulness": 1.0,
+     "relevancy": 1.0
+    },
+    "audit": 1.0,
+    "chars": 373
+   },
+   "styled": {
+    "judge": {
+     "statements": 4,
+     "supported": 2,
+     "faithfulness": 0.5,
+     "relevancy": 0.8
+    },
+    "audit": 0.5,
+    "chars": 1571
+   }
+  },
+  {
+   "question": "State Kirchhoff's rules of electrical networks.",
+   "persona_applied": false,
+   "psc_consistent": null,
+   "psc_reason": "",
+   "standard": {
+    "judge": {
+     "statements": 4,
+     "supported": 3,
+     "faithfulness": 0.75,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 1843
+   },
+   "styled": {
+    "judge": {
+     "statements": 4,
+     "supported": 2,
+     "faithfulness": 0.5,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 1518
+   }
+  },
+  {
+   "question": "Derive an expression for the electric field due to an infinitely long straight charged conductor.",
+   "persona_applied": true,
+   "psc_consistent": true,
+   "psc_reason": "similar phrasing and structure",
+   "standard": {
+    "judge": {
+     "statements": 6,
+     "supported": 4,
+     "faithfulness": 0.667,
+     "relevancy": 0.8
+    },
+    "audit": 0.71,
+    "chars": 1336
+   },
+   "styled": {
+    "judge": null,
+    "audit": 1.0,
+    "chars": 1878
+   }
+  },
+  {
+   "question": "Explain what electric flux means and how it is calculated.",
+   "persona_applied": true,
+   "psc_consistent": true,
+   "psc_reason": "matches concept and formula",
+   "standard": {
+    "judge": {
+     "statements": 5,
+     "supported": 3,
+     "faithfulness": 0.6,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 863
+   },
+   "styled": {
+    "judge": {
+     "statements": 6,
+     "supported": 4,
+     "faithfulness": 0.667,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 2231
+   }
+  },
+  {
+   "question": "State Gauss's law and explain what the closed surface represents.",
+   "persona_applied": true,
+   "psc_consistent": false,
+   "psc_reason": "neutral content, lacks educator's detail",
+   "standard": {
+    "judge": {
+     "statements": 5,
+     "supported": 3,
+     "faithfulness": 0.6,
+     "relevancy": 0.8
+    },
+    "audit": 0.83,
+    "chars": 808
+   },
+   "styled": {
+    "judge": {
+     "statements": 5,
+     "supported": 4,
+     "faithfulness": 0.8,
+     "relevancy": 0.8
+    },
+    "audit": 0.9,
+    "chars": 1722
+   }
+  },
+  {
+   "question": "Why does the electric field inside a charged conducting shell vanish?",
+   "persona_applied": true,
+   "psc_consistent": true,
+   "psc_reason": "uses similar phrasing and structure",
+   "standard": {
+    "judge": {
+     "statements": 4,
+     "supported": 2,
+     "faithfulness": 0.5,
+     "relevancy": 0.7
+    },
+    "audit": 1.0,
+    "chars": 1249
+   },
+   "styled": {
+    "judge": {
+     "statements": 3,
+     "supported": 2,
+     "faithfulness": 0.667,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 1784
+   }
+  },
+  {
+   "question": "Explain how Gauss's law gives the field of a uniformly charged sphere.",
+   "persona_applied": true,
+   "psc_consistent": true,
+   "psc_reason": "matches concept and structure",
+   "standard": {
+    "judge": {
+     "statements": 7,
+     "supported": 5,
+     "faithfulness": 0.714,
+     "relevancy": 0.8
+    },
+    "audit": 0.92,
+    "chars": 2078
+   },
+   "styled": {
+    "judge": {
+     "statements": 7,
+     "supported": 5,
+     "faithfulness": 0.714,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 3711
+   }
+  },
+  {
+   "question": "What is an electric dipole and what is its dipole moment?",
+   "persona_applied": true,
+   "psc_consistent": false,
+   "psc_reason": "No electric flux discussion",
+   "standard": {
+    "judge": {
+     "statements": 5,
+     "supported": 3,
+     "faithfulness": 0.6,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 2168
+   },
+   "styled": {
+    "judge": {
+     "statements": 7,
+     "supported": 4,
+     "faithfulness": 0.571,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 2949
+   }
+  },
+  {
+   "question": "Explain the difference between electric potential and potential energy.",
+   "persona_applied": false,
+   "psc_consistent": null,
+   "psc_reason": "",
+   "standard": {
+    "judge": {
+     "statements": 6,
+     "supported": 4,
+     "faithfulness": 0.667,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 950
+   },
+   "styled": {
+    "judge": {
+     "statements": 4,
+     "supported": 3,
+     "faithfulness": 0.75,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 888
+   }
+  },
+  {
+   "question": "How does a capacitor store energy in its electric field?",
+   "persona_applied": false,
+   "psc_consistent": null,
+   "psc_reason": "",
+   "standard": {
+    "judge": {
+     "statements": 5,
+     "supported": 4,
+     "faithfulness": 0.8,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 1495
+   },
+   "styled": {
+    "judge": {
+     "statements": 4,
+     "supported": 3,
+     "faithfulness": 0.75,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 2156
+   }
+  },
+  {
+   "question": "Explain why electric field lines never cross one another.",
+   "persona_applied": true,
+   "psc_consistent": false,
+   "psc_reason": "no electric field examples",
+   "standard": {
+    "judge": {
+     "statements": 6,
+     "supported": 4,
+     "faithfulness": 0.667,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 1868
+   },
+   "styled": {
+    "judge": {
+     "statements": 4,
+     "supported": 2,
+     "faithfulness": 0.5,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 733
+   }
+  },
+  {
+   "question": "Describe how charge distributes itself on a conductor's surface.",
+   "persona_applied": true,
+   "psc_consistent": true,
+   "psc_reason": "focuses on electric field and flux concepts",
+   "standard": {
+    "judge": {
+     "statements": 4,
+     "supported": 3,
+     "faithfulness": 0.75,
+     "relevancy": 0.8
+    },
+    "audit": 0.88,
+    "chars": 1269
+   },
+   "styled": {
+    "judge": {
+     "statements": 4,
+     "supported": 3,
+     "faithfulness": 0.75,
+     "relevancy": 0.8
+    },
+    "audit": 1.0,
+    "chars": 972
+   }
+  }
+ ]
+}

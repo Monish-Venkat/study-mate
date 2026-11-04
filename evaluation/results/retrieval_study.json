@@ -1,0 +1,81 @@
+{
+ "passages": 7669,
+ "vocabulary": 48010,
+ "top1_similarity": {
+  "answerable": {
+   "n": 150,
+   "min": 0.234,
+   "max": 0.957,
+   "mean": 0.588,
+   "median": 0.602,
+   "p05": 0.37,
+   "p95": 0.737
+  },
+  "unanswerable": {
+   "n": 24,
+   "min": 0.201,
+   "max": 0.65,
+   "mean": 0.348,
+   "median": 0.306,
+   "p05": 0.201,
+   "p95": 0.53
+  }
+ },
+ "threshold_sweep": [
+  {
+   "threshold": 0.3,
+   "answerable_below": 1,
+   "unanswerable_above": 15
+  },
+  {
+   "threshold": 0.35,
+   "answerable_below": 4,
+   "unanswerable_above": 10
+  },
+  {
+   "threshold": 0.4,
+   "answerable_below": 11,
+   "unanswerable_above": 7
+  },
+  {
+   "threshold": 0.45,
+   "answerable_below": 17,
+   "unanswerable_above": 4
+  },
+  {
+   "threshold": 0.5,
+   "answerable_below": 29,
+   "unanswerable_above": 2
+  },
+  {
+   "threshold": 0.55,
+   "answerable_below": 49,
+   "unanswerable_above": 1
+  },
+  {
+   "threshold": 0.6,
+   "answerable_below": 75,
+   "unanswerable_above": 1
+  },
+  {
+   "threshold": 0.65,
+   "answerable_below": 101,
+   "unanswerable_above": 0
+  },
+  {
+   "threshold": 0.7,
+   "answerable_below": 133,
+   "unanswerable_above": 0
+  }
+ ],
+ "exact_term_probe": {
+  "questions": 150,
+  "dense_mrr": 0.493,
+  "hybrid_mrr": 0.566,
+  "dense_hits_at_5": 91,
+  "hybrid_hits_at_5": 100,
+  "hybrid_better": 32,
+  "dense_better": 3,
+  "tied": 115
+ }
+}

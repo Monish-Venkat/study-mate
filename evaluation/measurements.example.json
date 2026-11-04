@@ -1,0 +1,17 @@
+{
+  "faculty_vetted_questions": 0,
+  "respondents": 0,
+  "minimum_exposure_days": 0,
+  "independent_style_judge": false,
+  "content_accuracy": [],
+  "faithfulness": [],
+  "answer_relevance": [],
+  "context_relevance": [],
+  "persona_consistency": [],
+  "tam_usefulness": [],
+  "tam_ease": [],
+  "latency_seconds": [],
+  "pyq_accuracy": [],
+  "mock_compliance": [],
+  "asr_wer": []
+}

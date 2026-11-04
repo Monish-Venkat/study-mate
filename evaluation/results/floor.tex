@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\caption{Effect of the evidence floor, $48$ items per configuration from the
+physics split. Both rows were measured in the same session; the baseline is
+a re-run of the shipped configuration of Table~\ref{tab:ablation} rather than
+its published numbers, because generation is sampled and the two differ
+slightly. \emph{Rest.} is the mean number of passages restored past the
+grader per request.}
+\label{tab:floor}
+\centering
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Configuration} & \textbf{Src.} & \textbf{Abst.\,P} & \textbf{Abst.\,R} & \textbf{False} & \textbf{Rest.} & \textbf{Lat.\,(s)} \\
+\midrule
+filter\,+\,CRAG ($3$B) & 1.02 & 0.47 & 0.88 & 8 & 0.00 & 13.1 \\
+\quad +\,evidence floor & 2.56 & 0.78 & 0.88 & 2 & 1.33 & 14.7 \\
+\bottomrule
+\end{tabular}
+\end{table}

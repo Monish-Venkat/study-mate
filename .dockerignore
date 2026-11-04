@@ -1,0 +1,8 @@
+.runtime
+frontend
+edurag_fixed_full
+data
+.env*
+.git
+tmp
+__pycache__

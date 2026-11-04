@@ -1,0 +1,337 @@
+/* ===================================================================
+ * Diagram-based learning
+ * =================================================================== */
+
+.diagram-figure {
+  position: relative;
+  margin: 22px 0 0;
+  padding: 18px 18px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.diagram-tools {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.diagram-tools button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.diagram-tools button:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--line-accent);
+  background: var(--accent-soft);
+}
+
+.diagram-tools button:disabled { opacity: .45; cursor: not-allowed; }
+.diagram-tools button[aria-pressed='true'] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.diagram-canvas {
+  overflow-x: auto;
+  max-height: 460px;
+  overflow-y: auto;
+  padding: 8px 0 2px;
+}
+
+.diagram-figure.is-full .diagram-canvas { max-height: none; }
+
+.diagram-canvas svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+}
+
+/* Mermaid colours its own nodes from the theme variables we pass it, but it
+ * leaves label fills to its section palette, which can land far from our
+ * foreground. Pinning the text keeps every label legible in both themes. */
+.diagram-canvas svg text,
+.diagram-canvas svg .nodeLabel,
+.diagram-canvas svg .edgeLabel { fill: var(--ink); color: var(--ink); }
+.diagram-canvas svg .edgeLabel {
+  background: var(--surface-2);
+  font-size: 12.5px;
+}
+.diagram-canvas svg .edgeLabel rect { fill: var(--surface-2); opacity: 1; }
+
+/* Mermaid draws the mindmap root from a theme slot that its own dark handling
+ * takes to near-black, which left the topic unreadable inside its own circle.
+ * It is pinned to a tint/foreground pair already contrast-checked in both
+ * themes, which also keeps the root reading as part of this palette.
+ *
+ * !important is load-bearing rather than lazy here: Mermaid injects a <style>
+ * block inside the generated SVG whose selectors are scoped by the diagram's
+ * id, so every rule it writes outranks any class selector from this file. */
+.diagram-canvas svg .section-root circle.node-bkg,
+.diagram-canvas svg .section-root ellipse.node-bkg,
+.diagram-canvas svg .section-root rect.node-bkg,
+.diagram-canvas svg .section-root polygon.node-bkg,
+.diagram-canvas svg .section-root path.node-bkg {
+  fill: var(--accent-soft) !important;
+  stroke: var(--accent) !important;
+  stroke-width: 1.5px !important;
+}
+
+/* The plate behind a node's text, which Mermaid also paints from that slot. */
+.diagram-canvas svg .mindmap-node rect.background {
+  fill: transparent !important;
+}
+
+.diagram-canvas svg .section-root text,
+.diagram-canvas svg .section-root tspan,
+.diagram-canvas svg .section-root .nodeLabel {
+  fill: var(--ink) !important;
+  color: var(--ink) !important;
+  font-weight: 600;
+}
+
+.diagram-skeleton {
+  height: 220px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(100deg, var(--surface-2) 30%, var(--hover) 50%, var(--surface-2) 70%);
+  background-size: 220% 100%;
+  animation: diagram-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes diagram-shimmer {
+  from { background-position: 180% 0; }
+  to { background-position: -40% 0; }
+}
+
+.diagram-failed {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 18px;
+  background: var(--amber-soft);
+  border: 1px solid var(--amber-line);
+  border-radius: var(--radius-sm);
+  color: var(--amber-ink);
+  font-size: 13px;
+}
+
+.diagram-failed strong { display: block; margin-bottom: 4px; }
+.diagram-failed p { margin: 0 0 10px; }
+.diagram-failed pre {
+  margin: 0;
+  padding: 12px;
+  overflow-x: auto;
+  background: var(--surface);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.diagram-sources {
+  margin-top: 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.diagram-sources summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.diagram-sources ul {
+  margin: 10px 0 0;
+  padding-left: 2px;
+  list-style: none;
+  display: grid;
+  gap: 5px;
+}
+
+.diagram-sources li { overflow-wrap: anywhere; }
+
+/* ===================================================================
+ * Grounding check
+ *
+ * Three tones, but tone is never the only signal: the icon changes, the
+ * percentage is written out, and the flagged statements are listed with a
+ * named reason. A student who cannot separate the hues loses nothing.
+ * =================================================================== */
+
+.grounding {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+
+.grounding.is-good { background: var(--positive-soft); border-color: var(--line-accent); }
+.grounding.is-fair { background: var(--amber-soft); border-color: var(--amber-line); }
+.grounding.is-poor { background: var(--danger-soft); border-color: var(--danger-line); }
+
+.grounding-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  align-items: start;
+}
+
+.grounding-head > svg { margin-top: 2px; }
+.grounding.is-good > .grounding-head > svg { color: var(--positive); }
+.grounding.is-fair > .grounding-head > svg { color: var(--amber); }
+.grounding.is-poor > .grounding-head > svg { color: var(--danger); }
+
+.grounding-headline strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.grounding-headline small {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.grounding-meter {
+  grid-column: 2;
+  display: block;
+  height: 5px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: oklch(from var(--ink) l c h / 0.10);
+  overflow: hidden;
+}
+
+/* Scaled rather than resized: animating width would relayout the row on every
+ * frame, and the bar only ever changes along one axis. */
+.grounding-meter > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transform-origin: left center;
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1);
+}
+
+.grounding.is-good .grounding-meter > span { background: var(--positive); }
+.grounding.is-fair .grounding-meter > span { background: var(--amber); }
+.grounding.is-poor .grounding-meter > span { background: var(--danger); }
+
+.grounding-detail { margin-top: 14px; }
+
+.grounding-detail summary {
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.grounding-detail summary:hover { color: var(--ink); }
+
+.grounding-detail ul {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.grounding-detail li {
+  padding: 11px 13px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.grounding-detail li p {
+  margin: 7px 0 0;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.claim-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.claim-unsupported .claim-tag { background: var(--danger-soft); color: var(--danger); }
+.claim-miscited .claim-tag { background: var(--amber-soft); color: var(--amber-ink); }
+.claim-uncited .claim-tag { background: var(--info-soft); color: var(--info); }
+
+.grounding-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 12px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.grounding-note svg { flex-shrink: 0; margin-top: 2px; }
+
+/* ===================================================================
+ * Theme toggle
+ * =================================================================== */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--line-accent);
+  background: var(--accent-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diagram-skeleton { animation: none; }
+  .grounding-meter > span { transition: none; }
+}
+
+@media (max-width: 700px) {
+  .diagram-figure { padding: 14px 12px 12px; }
+  .diagram-canvas { max-height: 360px; }
+  .diagram-tools { top: 8px; right: 8px; }
+  .grounding { padding: 14px; }
+}

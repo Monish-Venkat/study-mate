@@ -1,0 +1,63 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+  model-init:
+    image: ollama/ollama:latest
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["ollama", "pull", "qwen2.5:3b"]
+    depends_on:
+      ollama:
+        condition: service_healthy
+  index-init:
+    build: .
+    command: ["python", "scripts/build_index.py"]
+    environment:
+      DATA_DIR: /app/data
+      DB_DIR: /app/data/db
+      VECTOR_DIR: /app/data/db/faiss-complete
+      TEXTBOOKS_DIR: /app/data/textbooks
+      QUESTION_PAPERS_DIR: /app/data/question_papers
+      SYLLABUS_DIR: /app/data/syllabus
+      HF_HOME: /models/huggingface
+    volumes:
+      - ./data:/app/data
+      - embeddings:/models
+  backend:
+    build: .
+    env_file: .env
+    environment:
+      VLLM_BASE_URL: http://ollama:11434
+      DATA_DIR: /app/data
+      DB_DIR: /app/data/db
+      VECTOR_DIR: /app/data/db/faiss-complete
+      TEXTBOOKS_DIR: /app/data/textbooks
+      QUESTION_PAPERS_DIR: /app/data/question_papers
+      SYLLABUS_DIR: /app/data/syllabus
+      HF_HOME: /models/huggingface
+    volumes:
+      - ./data:/app/data
+      - embeddings:/models
+    depends_on:
+      index-init:
+        condition: service_completed_successfully
+      model-init:
+        condition: service_completed_successfully
+  frontend:
+    build: ./frontend
+    environment:
+      BACKEND_URL: http://backend:8000
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - backend
+volumes:
+  ollama:
+  embeddings:

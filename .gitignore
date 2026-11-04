@@ -1,0 +1,19 @@
+node_modules/
+.next/
+.runtime/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.env.local
+data/db/
+tmp/
+data/
+edurag_fixed_full/
+*.tsbuildinfo
+
+# Additional generated state / secrets
+.venv/
+**/.storage-key
+data/models/
+evaluation/measurements.json

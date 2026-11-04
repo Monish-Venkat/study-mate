@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\caption{Judged evaluation of the same $22$ answers and $9$ persona answers by two judges: Qwen2.5-7B, from the generator\textquotesingle{}s own family, and Gemini 2.5 Flash from another. The generator is Qwen2.5-3B throughout, so the columns differ only in who is scoring. Faithfulness follows the RAGAS definition; relevancy is a direct judge rating, not RAGAS\textquotesingle{}s question-regeneration procedure.}
+\label{tab:judged}
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Measure} & \textbf{Qwen2.5-7B} & \textbf{Gemini 2.5} \\
+\midrule
+Faithfulness (RAGAS definition) & 0.676 & 0.537 \\
+Statements extracted per answer & 4.3 & 8.1 \\
+Answer relevancy (judge-rated) & 0.784 & 0.832 \\
+PSC (submitted target $0.78$) & 0.222 & 0.333 \\
+\midrule
+\multicolumn{3}{l}{\emph{Agreement between the two judges}} \\
+Faithfulness correlation ($r$) & \multicolumn{2}{r}{-0.074} \\
+Mean absolute difference & \multicolumn{2}{r}{0.288} \\
+PSC agreement ($\kappa$) & \multicolumn{2}{r}{0.182} \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,164 @@
+/* StudyMate colour system.
+ *
+ * The surface is Operate: a student is trying to finish a piece of work, so
+ * colour here encodes action, state and wayfinding rather than atmosphere.
+ * The previous palette spent a single low-chroma green on everything, which
+ * left the primary action, a selected tool and an ordinary border reading at
+ * the same weight.
+ *
+ * Three hue families now do distinct jobs:
+ *   paper   warm near-neutrals, hue ~100, carrying the canvas and its panels
+ *   pine    the one saturated colour, hue ~166, reserved for action and
+ *           selection so that its rarity is what makes it findable
+ *   amber   hue ~70, for attention that is not an action: evidence, status,
+ *           the thing worth reading next
+ *
+ * Values are OKLCH so that a ramp can hold its hue while lightness moves, and
+ * so dark mode can be composed from the same hues instead of inverted.
+ */
+
+:root {
+  color-scheme: light;
+
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Canvas and panels -------------------------------------------------- */
+  --canvas: oklch(0.984 0.005 95);
+  --bg: var(--canvas);
+  --surface: oklch(1 0 0);
+  --surface-2: oklch(0.963 0.008 100);
+  --sidebar: oklch(0.957 0.010 104);
+  --hover: oklch(0.935 0.013 118);
+
+  /* Text ---------------------------------------------------------------- */
+  --ink: oklch(0.27 0.025 170);
+  --ink-soft: oklch(0.40 0.022 168);
+  --muted: oklch(0.515 0.018 150);
+
+  /* Lines --------------------------------------------------------------- */
+  --line: oklch(0.905 0.009 110);
+  --line-strong: oklch(0.845 0.013 130);
+  --line-accent: oklch(0.875 0.030 150);
+
+  /* Action: the only saturated colour, so it is never spent on decoration */
+  --accent: oklch(0.470 0.085 168);
+  --accent-strong: oklch(0.375 0.085 168);
+  --accent-soft: oklch(0.945 0.028 160);
+  --accent-ink: oklch(0.395 0.055 165);
+  --on-accent: oklch(0.99 0.008 160);
+  --focus: oklch(0.600 0.090 168);
+
+  /* Attention that is not an action ------------------------------------- */
+  --amber: oklch(0.700 0.125 68);
+  --amber-soft: oklch(0.957 0.038 80);
+  --amber-ink: oklch(0.440 0.080 60);
+  --amber-line: oklch(0.875 0.055 72);
+
+  /* Semantics ------------------------------------------------------------ */
+  --positive: oklch(0.520 0.110 155);
+  --positive-soft: oklch(0.950 0.030 155);
+  --danger: oklch(0.470 0.130 32);
+  --danger-soft: oklch(0.966 0.020 40);
+  --danger-line: oklch(0.860 0.050 35);
+  --info: oklch(0.520 0.105 250);
+  --info-soft: oklch(0.952 0.025 250);
+
+  /* Depth: every shadow carries an offset and a soft blur ---------------- */
+  --shadow-sm: 0 1px 2px oklch(0.27 0.03 170 / 0.05), 0 1px 3px oklch(0.27 0.03 170 / 0.05);
+  --shadow-md: 0 2px 4px oklch(0.27 0.03 170 / 0.04), 0 6px 18px oklch(0.27 0.03 170 / 0.07);
+  --shadow-lg: 0 4px 10px oklch(0.27 0.03 170 / 0.05), 0 18px 44px oklch(0.27 0.03 170 / 0.10);
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 18px;
+}
+
+/* Dark is composed, not inverted: the paper hues become deep ink-teal, and
+ * pine is lifted well past its light-mode lightness so that it still reads as
+ * the action colour against a dark panel rather than disappearing into it. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --canvas: oklch(0.175 0.012 175);
+    --surface: oklch(0.216 0.014 175);
+    --surface-2: oklch(0.256 0.015 175);
+    --sidebar: oklch(0.198 0.013 175);
+    --hover: oklch(0.292 0.018 175);
+
+    --ink: oklch(0.945 0.008 100);
+    --ink-soft: oklch(0.845 0.012 105);
+    --muted: oklch(0.720 0.014 110);
+
+    --line: oklch(0.315 0.014 175);
+    --line-strong: oklch(0.400 0.018 175);
+    --line-accent: oklch(0.385 0.040 168);
+
+    --accent: oklch(0.745 0.105 165);
+    --accent-strong: oklch(0.825 0.100 165);
+    --accent-soft: oklch(0.300 0.045 168);
+    --accent-ink: oklch(0.860 0.070 165);
+    --on-accent: oklch(0.175 0.030 170);
+    --focus: oklch(0.780 0.100 165);
+
+    --amber: oklch(0.800 0.120 72);
+    --amber-soft: oklch(0.308 0.050 70);
+    --amber-ink: oklch(0.880 0.080 75);
+    --amber-line: oklch(0.420 0.065 72);
+
+    --positive: oklch(0.760 0.110 158);
+    --positive-soft: oklch(0.300 0.045 158);
+    --danger: oklch(0.730 0.120 35);
+    --danger-soft: oklch(0.285 0.055 32);
+    --danger-line: oklch(0.420 0.080 32);
+    --info: oklch(0.750 0.095 250);
+    --info-soft: oklch(0.295 0.045 250);
+
+    --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.30), 0 1px 3px oklch(0 0 0 / 0.26);
+    --shadow-md: 0 2px 4px oklch(0 0 0 / 0.28), 0 6px 18px oklch(0 0 0 / 0.36);
+    --shadow-lg: 0 4px 10px oklch(0 0 0 / 0.30), 0 18px 44px oklch(0 0 0 / 0.46);
+  }
+}
+
+/* The same dark composition, selected explicitly rather than by the OS. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --canvas: oklch(0.175 0.012 175);
+  --surface: oklch(0.216 0.014 175);
+  --surface-2: oklch(0.256 0.015 175);
+  --sidebar: oklch(0.198 0.013 175);
+  --hover: oklch(0.292 0.018 175);
+
+  --ink: oklch(0.945 0.008 100);
+  --ink-soft: oklch(0.845 0.012 105);
+  --muted: oklch(0.720 0.014 110);
+
+  --line: oklch(0.315 0.014 175);
+  --line-strong: oklch(0.400 0.018 175);
+  --line-accent: oklch(0.385 0.040 168);
+
+  --accent: oklch(0.745 0.105 165);
+  --accent-strong: oklch(0.825 0.100 165);
+  --accent-soft: oklch(0.300 0.045 168);
+  --accent-ink: oklch(0.860 0.070 165);
+  --on-accent: oklch(0.175 0.030 170);
+  --focus: oklch(0.780 0.100 165);
+
+  --amber: oklch(0.800 0.120 72);
+  --amber-soft: oklch(0.308 0.050 70);
+  --amber-ink: oklch(0.880 0.080 75);
+  --amber-line: oklch(0.420 0.065 72);
+
+  --positive: oklch(0.760 0.110 158);
+  --positive-soft: oklch(0.300 0.045 158);
+  --danger: oklch(0.730 0.120 35);
+  --danger-soft: oklch(0.285 0.055 32);
+  --danger-line: oklch(0.420 0.080 32);
+  --info: oklch(0.750 0.095 250);
+  --info-soft: oklch(0.295 0.045 250);
+
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.30), 0 1px 3px oklch(0 0 0 / 0.26);
+  --shadow-md: 0 2px 4px oklch(0 0 0 / 0.28), 0 6px 18px oklch(0 0 0 / 0.36);
+  --shadow-lg: 0 4px 10px oklch(0 0 0 / 0.30), 0 18px 44px oklch(0 0 0 / 0.46);
+}

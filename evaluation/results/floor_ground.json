@@ -1,0 +1,1484 @@
+{
+ "summary": {
+  "label": "floor_ground",
+  "items": 48,
+  "answered": 37,
+  "avg_secs": 14.5,
+  "avg_sources": 2.67,
+  "citation_rate": 0.1,
+  "abstention_precision": 0.7,
+  "abstention_recall": 0.875,
+  "false_abstentions": 3,
+  "avg_restored": 1.31,
+  "avg_dropped": 3.52,
+  "avg_boilerplate_removed": 0.04,
+  "grounding_items": 37,
+  "avg_grounded_fraction": 0.781,
+  "avg_cited_fraction": 0.065,
+  "answers_with_unsupported": 28,
+  "answers_with_dangling": 0,
+  "avg_claims": 8.1
+ },
+ "rows": [
+  {
+   "id": "phys-PUC1-0000",
+   "answerable": true,
+   "declined": true,
+   "secs": 24.6,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 1,
+    "action": "incorrect",
+    "rewritten_query": "Why no atm Moon phys PUC1",
+    "dropped": 1,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-0001",
+   "answerable": true,
+   "declined": false,
+   "secs": 13.5,
+   "chars": 1183,
+   "citations": 1,
+   "sources": 4,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "What law states external force needed for motion?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 8,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.89,
+    "cited_fraction": 0.0
+   },
+   "answer": "A. Aristotelian law of motion is the statement that an external force is required to keep a body in motion. This is a direct answer from the provided context [1] keph104.pdf, page 2.\n\nExplanation, in the terminology the prescribed textbook uses, is that Aristotle believed that for a body to maintain motion, an external force was required. This is a natural view based on common experience, as a child knows that a toy car needs to be pushed to keep moving. The context does not provide a direct explanation for Newton's laws, but it mentions Aristotle's view and its flaws.\n\nThe governing formula for Newton's first law of motion, which states that an object will remain at rest or in uniform motion in a straight line unless acted upon by an external force, is not provided in the context. The context does not contain a worked example or application of Newton's first law. \n\nA 5-mark answer would earn a depth of complete but not padded. It would clearly state the statement and provide context, then explain Aristotle's view and its flaw, and mention Newton's first law and its essence.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0002",
+   "answerable": true,
+   "declined": false,
+   "secs": 17.9,
+   "chars": 1561,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 7,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.88,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A particle executing simple harmonic motion has an angular frequency given by the formula \\(\\omega = \\sqrt{\\frac{k}{m}}\\).\n2. In the terminology of the prescribed textbook, the angular frequency \\(\\omega\\) represents the rate at which the particle oscillates in simple harmonic motion.\n3. The governing formula for the angular frequency of a particle executing simple harmonic motion is:\n   \\[\n   \\omega = \\sqrt{\\frac{k}{m}}\n   \\]\n   where \\(k\\) is the spring constant and \\(m\\) is the mass of the block.\n4. Given the spring constant \\(k = 50 \\, \\text{N/m}\\) and the mass \\(m = 1 \\, \\text{kg}\\), the angular frequency \\(\\omega\\) is calculated as follows:\n   \\[\n   \\omega = \\sqrt{\\frac{50 \\, \\text{N/m}}{1 \\, \\text{kg}}} = \\sqrt{50} \\, \\text{rad/s} = 7.07 \\, \\text{rad/s}\n   \\]\nA 5-mark answer would earn a depth of complete but not padded. It would clearly state the statement and provide context, then explain the formula and its application, and mention the calculated angular frequency.\n\nThe maximum speed \\(v_{\\text{max}}\\) of the block during simple harmonic motion is given by the formula:\n\\[\nv_{\\text{max}} = \\omega a\n\\]\nwhere \\(a\\) is the amplitude of the motion. Here, the amplitude \\(a = 0.1 \\, \\text{m} = 10 \\, \\text{cm}\\). Therefore, the maximum speed is:\n\\[\nv_{\\text{max}} = 7.07 \\, \\text{rad/s} \\times 0.1 \\, \\text{m} = 0.707 \\, \\text{m/s}\n\\]\nThis completes the derivation and application of the formula for the maximum speed in simple harmonic motion.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0003",
+   "answerable": true,
+   "declined": true,
+   "secs": 2.1,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 2,
+    "action": "incorrect",
+    "rewritten_query": "Physics PUC1 no diagrams circuits lose marks",
+    "dropped": 2,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-0004",
+   "answerable": true,
+   "declined": false,
+   "secs": 16.2,
+   "chars": 1223,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Poisson’s ratio definition from physics PUC1 textbook",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 3
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 0,
+     "uncited": 8,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. The ratio of lateral strain to longitudinal strain in a stretched wire is called Poisson's ratio.\n2. In the terminology of the prescribed textbook, Poisson's ratio is the strain perpendicular to the applied force, which is called lateral strain, divided by the longitudinal strain. It is a ratio of two strains and is a pure number with no dimensions or units.\n3. Poisson's ratio is given by the formula:\n   \\[\n   \\text{Poisson's ratio} = \\frac{\\text{lateral strain}}{\\text{longitudinal strain}}\n   \\]\n4. For a stretched wire, if the original diameter of the wire is \\(d\\) and the contraction of the diameter under stress is \\(\\Delta d\\), the lateral strain is \\(\\frac{\\Delta d}{d}\\). If the original length of the wire is \\(l\\) and the elongation under stress is \\(\\Delta l\\), the longitudinal strain is \\(\\frac{\\Delta l}{l}\\). Therefore, Poisson's ratio is:\n   \\[\n   \\text{Poisson's ratio} = \\frac{\\frac{\\Delta d}{d}}{\\frac{\\Delta l}{l}} = \\frac{\\Delta d}{\\Delta l} \\times \\frac{l}{d}\n   \\]\n\nA 5-mark answer would earn a depth of complete but not padded. It would clearly state the statement and provide context, then explain Poisson's ratio and its calculation, and mention the formula and the definition of strain."
+  },
+  {
+   "id": "phys-PUC1-0005",
+   "answerable": true,
+   "declined": false,
+   "secs": 23.0,
+   "chars": 1628,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Angle rope makes with vert for 8kg mass 60N eq",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 3
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 6,
+     "miscited": 0,
+     "unsupported": 3
+    },
+    "grounded_fraction": 0.67,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A body of mass 8 kg suspended by a rope of length 2.5 m makes an angle with the vertical when a horizontal force of 60 N is applied, and in equilibrium, the angle is found to be 36.87 degrees.\n2. In the terminology of the prescribed textbook, the angle that the rope makes with the vertical is the angle of the resultant force vector with respect to the vertical, which is the direction of the gravitational force.\n3. The governing formula for the angle of equilibrium in such a scenario is derived from the balance of forces and torques. The torque due to the applied force is balanced by the gravitational torque. The formula for the angle θ is derived from the equilibrium conditions:\n   \\[\n   \\theta = \\arctan\\left(\\frac{F}{mg}\\right)\n   \\]\n   where \\( F \\) is the horizontal force, \\( m \\) is the mass of the body, and \\( g \\) is the acceleration due to gravity.\n4. A 5-mark answer would earn a depth of complete but not padded. It would clearly state the statement and provide context, then explain the formula and its application, and mention the calculated angle.\n\nGiven:\n- \\( m = 8 \\, \\text{kg} \\)\n- \\( F = 60 \\, \\text{N} \\)\n- \\( g = 10 \\, \\text{m/s}^2 \\)\n\nThe angle \\( \\theta \\) is calculated as follows:\n\\[\n\\theta = \\arctan\\left(\\frac{F}{mg}\\right) = \\arctan\\left(\\frac{60 \\, \\text{N}}{8 \\, \\text{kg} \\times 10 \\, \\text{m/s}^2}\\right) = \\arctan(0.75)\n\\]\nUsing a calculator, \\( \\arctan(0.75) \\approx 36.87^\\circ \\).\n\nTherefore, the angle that the rope makes with the vertical in equilibrium is approximately 36.87 degrees.\n\nCheck before relying on this: 3 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0006",
+   "answerable": true,
+   "declined": false,
+   "secs": 17.6,
+   "chars": 1460,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "What are the two conditions for rigid body equilibrium?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 3
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 2,
+     "uncited": 8,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.91,
+    "cited_fraction": 0.18
+   },
+   "answer": "The two conditions required for the mechanical equilibrium of a rigid body are:\n\n1. The vector sum of all the forces acting on the rigid body must be zero. This ensures that the total linear momentum of the body does not change with time.\n\n2. The vector sum of all the torques (moments) acting on the rigid body must also be zero. This ensures that the total angular momentum of the body does not change with time.\n\nExplanation, in the terminology of the prescribed textbook:\nIn the terminology of the prescribed textbook, the conditions for mechanical equilibrium of a rigid body are the same as those for a particle. The conditions are that the vector sum of all the forces on the rigid body must be zero, and the vector sum of all the torques on the rigid body must also be zero. These conditions ensure that the rigid body does not experience any linear or angular acceleration, meaning it is in a state of translational and rotational equilibrium.\n\nGoverning formula:\n\\[ \\sum \\mathbf{F} = \\mathbf{0} \\]\n\\[ \\sum \\mathbf{\\tau} = \\mathbf{0} \\]\n\nA 5-mark answer would earn a depth of complete but not padded. It would clearly state the conditions and provide context, then explain the conditions in the terminology of the prescribed textbook, and mention the governing formulas.\nCheck before relying on this: 1 statement could not be traced to the retrieved passages.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0007",
+   "answerable": true,
+   "declined": false,
+   "secs": 42.0,
+   "chars": 2441,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "ambiguous",
+    "rewritten_query": "sublimation definition physics PUC1 textbook",
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 0.5,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 6,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.86,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. Sublimation is the change from solid state to vapour state without passing through the liquid state.\n2. In the terminology of the prescribed textbook, sublimation is the process where a substance transitions directly from its solid state to its gaseous state, bypassing the liquid phase.\n3. Governing formula: None applicable in this context.\n4. Example: When 0. 15 kg of ice at - 10 °C is mixed with 0. 30 kg of water at 50 °C in a container, the resulting temperature is 6. 7 °C. Calculate the heat of fusion of ice. (Specific heat of water = 4186 J kg–1 K–1)\n\nGiven:\n- Mass of ice, \\( m_{\\text{ice}} = 0. 15 \\, \\text{kg} \\)\n- Initial temperature of ice, \\( T_{\\text{ice}} = -10 \\, \\text{°C} \\)\n- Mass of water, \\( m_{\\text{water}} = 0. 30 \\, \\text{kg} \\)\n- Initial temperature of water, \\( T_{\\text{water}} = 50 \\, \\text{°C} \\)\n- Specific heat of water, \\( c_{\\text{water}} = 4186 \\, \\text{J kg}^{-1} \\text{K}^{-1} \\)\n\nHeat lost by water:\n\\[ Q_{\\text{water}} = m_{\\text{water}} \\cdot c_{\\text{water}} \\cdot (T_{\\text{water}} - T_{\\text{final}})\\]\n\\[ Q_{\\text{water}} = 0. 30 \\, \\text{kg} \\cdot 4186 \\, \\text{J kg}^{-1} \\text{K}^{-1} \\cdot (50 \\, \\text{°C} - T_{\\text{final}})\\]\n\nHeat gained by ice:\n\\[ Q_{\\text{ice}} = m_{\\text{ice}} \\cdot L_{\\text{f}} \\]\n\\[ Q_{\\text{ice}} = 0. 15 \\, \\text{kg} \\cdot L_{\\text{f}} \\]\n\nSince the heat lost by water equals the heat gained by ice:\n\\[ Q_{\\text{water}} = -Q_{\\text{ice}} \\]\n\\[ 0. 30 \\, \\text{kg} \\cdot 4186 \\, \\text{J kg}^{-1} \\text{K}^{-1} \\cdot (50 \\, \\text{°C} - T_{\\text{final}}) = -0. 15 \\, \\text{kg} \\cdot L_{\\text{f}} \\]\n\nSolving for \\( L_{\\text{f}} \\):\n\\[ L_{\\text{f}} = \\frac{0. 30 \\, \\text{kg} \\cdot 4186 \\, \\text{J kg}^{-1} \\text{K}^{-1} \\cdot (50 \\, \\text{°C} - T_{\\text{final}})}{-0. 15 \\, \\text{kg}} \\]\n\nThe final temperature \\( T_{\\text{final}} \\) is 6. 7 °C. Substituting \\( T_{\\text{final}} \\):\n\\[ L_{\\text{f}} = \\frac{0. 30 \\, \\text{kg} \\cdot 4186 \\, \\text{J kg}^{-1} \\text{K}^{-1} \\cdot (50 \\, \\text{°C} - 6. 7 \\, \\text{°C})}{-0. 15 \\, \\text{kg}} \\]\n\\[ L_{\\text{f}} = \\frac{0. 30 \\, \\text{kg} \\cdot 4186 \\, \\text{J kg}^{-1} \\text{K}^{-1} \\cdot 43. 3 \\, \\text{°C}}{-0. 15 \\, \\text{kg}} \\]\n\\[ L_{\\text{f}} = \\frac{53032. 6 \\, \\text{J}}{-0. 15 \\, \\text{kg}} \\]\n\\[ L_{\\text{f}} = 35354. 4 \\, \\text{J kg}^{-1} \\]\n\nTherefore, the heat of fusion of ice is approximately 35354. 4 J kg–1.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0008",
+   "answerable": true,
+   "declined": false,
+   "secs": 18.6,
+   "chars": 1504,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "First law thermodynamics states? Isothermal vs adiabatic differences?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 0,
+     "uncited": 8,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "a) The first law of thermodynamics states that the change in internal energy of a system (∆u) is equal to the heat supplied to the system (∆q) by the surroundings minus the work done by the system (∆w) on the surroundings. Mathematically, it is expressed as ∆q = ∆u + ∆w. In the terminology of the prescribed textbook, this law simply states that the energy supplied to the system (through heat and work) is conserved, and it is the general law of conservation of energy applied to systems where energy transfer from or to the surroundings is considered. \n\nb) Three differences between isothermal and adiabatic processes are:\n1. In an isothermal process, the temperature remains constant, whereas in an adiabatic process, no heat is exchanged with the surroundings (hence, the process is insulated).\n2. For an ideal gas undergoing an isothermal expansion, the heat absorbed by the gas equals the work done by the gas, as the internal energy does not change during an isothermal process. In contrast, in an adiabatic process, the work done by the gas results in a decrease in its internal energy, leading to a change in temperature.\n3. In an isothermal process, the pressure and volume change in a way that the product of pressure and volume (p * v) remains constant, as given by the ideal gas equation. In an adiabatic process, the product of pressure and volume (p * v) follows the adiabatic equation p * v^γ = constant, where γ is the ratio of specific heats at constant pressure and constant volume."
+  },
+  {
+   "id": "phys-PUC1-0009",
+   "answerable": true,
+   "declined": false,
+   "secs": 35.6,
+   "chars": 2845,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Newton's second law definition SI unit of force",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 15,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.94,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. Newton's second law of motion states that the rate of change of momentum of a body is directly proportional to the applied force and occurs in the direction in which the force acts. This law is a vector equation, meaning it has both magnitude and direction. It is applicable to a single point particle, and also to a rigid body or a system of particles, provided the force is the total external force on the system and the acceleration is the acceleration of the system as a whole. The second law is consistent with the first law, as a force of zero implies no acceleration. Newton's second law is expressed as \\( F = ma \\), where \\( F \\) is the net external force on the body, \\( m \\) is the mass of the body, and \\( a \\) is the acceleration of the body.\n\n2. In the terminology of the prescribed textbook, Newton's second law of motion is a vector equation that describes the relationship between the net external force acting on a body and the body's mass and acceleration. It is applicable to a single point particle and also to a rigid body or a system of particles. The second law is consistent with the first law, as a force of zero implies no acceleration. The second law is expressed as \\( F = ma \\), where \\( F \\) is the net external force on the body, \\( m \\) is the mass of the body, and \\( a \\) is the acceleration of the body.\n\n3. The SI unit of force is the newton (N), defined as \\( 1 \\, \\text{N} = 1 \\, \\text{kg} \\cdot \\text{m/s}^2 \\). This unit is derived from the second law of motion, which states that the force \\( F \\) is equal to the mass \\( m \\) of the object multiplied by its acceleration \\( a \\) (\\( F = ma \\)). Therefore, the newton is the unit in which the product of mass and acceleration is measured.\n\n4. Example 4.2: A bullet of mass 0.04 kg moving with a speed of 90 m/s enters a heavy wooden block and is stopped after a distance of 60 cm. What is the average resistive force exerted by the block on the bullet?\n\nSolution: To find the average resistive force exerted by the block on the bullet, we first need to calculate the retardation \\( a \\) of the bullet. Given the initial speed \\( u = 90 \\, \\text{m/s} \\), final speed \\( v = 0 \\, \\text{m/s} \\), and distance \\( s = 60 \\, \\text{cm} = 0.6 \\, \\text{m} \\), we use the equation of motion \\( v^2 = u^2 + 2as \\) to find \\( a \\).\n\n\\[ v^2 = u^2 + 2as \\]\n\\[ 0^2 = 90^2 + 2a \\times 0.6 \\]\n\\[ 0 = 8100 + 1.2a \\]\n\\[ a = -\\frac{8100}{1.2} = -6750 \\, \\text{m/s}^2 \\]\n\nThe negative sign indicates deceleration. Now, using Newton's second law \\( F = ma \\), we find the average resistive force \\( F \\):\n\n\\[ F = ma = 0.04 \\, \\text{kg} \\times 6750 \\, \\text{m/s}^2 = 270 \\, \\text{N} \\]\n\nThus, the average resistive force exerted by the block on the bullet is \\( 270 \\, \\text{N} \\).\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0010",
+   "answerable": true,
+   "declined": false,
+   "secs": 19.3,
+   "chars": 1283,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "SHM potential energy max min positions textbook",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 7,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.88,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. The potential energy of a particle executing simple harmonic motion (SHM) will be maximum at the extreme positions (i.e., when the particle is at the farthest distance from the equilibrium position) and zero at the equilibrium position.\n\n2. In the terminology of the prescribed textbook, the potential energy of a particle executing SHM is maximum at the extreme positions and zero at the equilibrium position. The potential energy function for SHM is given by \\( U(x) = \\frac{1}{2} k x^2 \\), where \\( k \\) is the spring constant and \\( x \\) is the displacement from the equilibrium position. At the extreme positions, \\( x = \\pm A \\) (where \\( A \\) is the amplitude), the potential energy is maximum. At the equilibrium position, \\( x = 0 \\), the potential energy is zero.\n\n3. Governing formula: \\( U(x) = \\frac{1}{2} k x^2 \\), where \\( k \\) is the spring constant and \\( x \\) is the displacement from the equilibrium position.\n\n4. For a particle executing SHM, if the amplitude \\( A = 10 \\, \\text{cm} \\), the maximum potential energy occurs at \\( x = \\pm 10 \\, \\text{cm} \\) and the potential energy is zero at \\( x = 0 \\).\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0011",
+   "answerable": true,
+   "declined": false,
+   "secs": 9.4,
+   "chars": 745,
+   "citations": 0,
+   "sources": 2,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 2,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 2,
+     "miscited": 0,
+     "unsupported": 2
+    },
+    "grounded_fraction": 0.5,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A one-sentence direct answer: Ball bearings placed between moving parts of a machine, and a compressed cushion of air between surfaces in relative motion are two methods of reducing friction.\n\n2. The prescribed textbook terminology: In the terminology of the prescribed textbook, reducing friction can be achieved by using ball bearings between moving parts of a machine and by employing a compressed cushion of air between surfaces in relative motion.\n\n3. Governing formula: None applicable in this context.\n\n4. A worked example or application: Not applicable in this context as the question asks for methods, not a specific example or application.\n\nCheck before relying on this: 2 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0012",
+   "answerable": true,
+   "declined": false,
+   "secs": 17.2,
+   "chars": 1235,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "max heat transfer copper to ice latent heat fusion",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 0,
+     "uncited": 6,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "A one-sentence direct answer: The maximum quantity of heat the copper plate can transfer to the ice block is 4. 14 × 10^6 J, and the maximum amount of ice it can melt is 1. 2 × 10^3 kg.\n\nExplanation in the terminology of the prescribed textbook: The prescribed textbook states that the maximum quantity of heat the copper plate can transfer to the ice block is calculated using the specific heat capacity of copper and the temperature difference. The maximum amount of ice it can melt is calculated using the latent heat of fusion of water.\n\nGoverning formula: The formula used is \\( Q = m \\cdot c \\cdot \\Delta T \\) for the heat transfer and \\( m = \\frac{Q}{L_f} \\) for the amount of ice melted, where \\( Q \\) is the heat transferred, \\( m \\) is the mass, \\( c \\) is the specific heat capacity, \\( \\Delta T \\) is the change in temperature, and \\( L_f \\) is the latent heat of fusion.\n\nWorked example or application: Not applicable in this context as the question asks for maximum values, not a specific example or application.\n\nCheck before relying on this: The information provided in the context covers the necessary steps to solve the problem, including the specific heat capacity of copper and the latent heat of fusion of water."
+  },
+  {
+   "id": "phys-PUC1-0013",
+   "answerable": true,
+   "declined": false,
+   "secs": 15.4,
+   "chars": 1367,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "How does moment of inertia and angular speed change?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 3
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 7,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.88,
+    "cited_fraction": 0.0
+   },
+   "answer": "A one-sentence direct answer: When the girl stretches her arms horizontally, her moment of inertia increases, causing her angular speed to decrease.\n\nExplanation in the terminology of the prescribed textbook: The girl's moment of inertia about the axis of rotation increases when she stretches her arms horizontally. According to the principle of conservation of angular momentum, if the external torque is zero (which is the case here, as the chair is rotating with considerable angular speed and there is no friction), the product of moment of inertia and angular speed remains constant. This means that as her moment of inertia increases, her angular speed must decrease to maintain the constant product.\n\nGoverning formula: lω = constant, where l is the moment of inertia and ω is the angular speed.\n\nWorked example or application: Not applicable in this context as the question asks for the effect of stretching her arms, not a specific example or application.\n\nCheck before relying on this: The information provided in the context covers the necessary steps to solve the problem, including the principle of conservation of angular momentum and the relationship between moment of inertia and angular speed.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0014",
+   "answerable": true,
+   "declined": false,
+   "secs": 14.6,
+   "chars": 1299,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 1,
+     "uncited": 3,
+     "miscited": 0,
+     "unsupported": 4
+    },
+    "grounded_fraction": 0.5,
+    "cited_fraction": 0.12
+   },
+   "answer": "A one-sentence direct answer: A body would weigh half of what it does on the surface of the Earth at a depth equal to half the radius of the Earth.\n\nExplanation in the terminology of the prescribed textbook: The prescribed textbook states that the weight of a body is inversely proportional to the square of the distance from the center of the Earth. Therefore, if a body weighs 250 N on the surface, at a depth equal to half the radius of the Earth, the weight would be half of that, i.e., 125 N.\n\nGoverning formula: Weight (W) = \\(\\frac{Mm}{r^2}\\), where \\(M\\) is the mass of the Earth, \\(m\\) is the mass of the body, and \\(r\\) is the distance from the center of the Earth.\n\nWorked example or application: Not applicable in this context as the question asks for the weight at specific distances, not a specific example or application.\n\nCheck before relying on this: The information provided in the context covers the necessary steps to solve the problem, including the inverse square law of weight and the relationship between weight and distance from the center of the Earth.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 4 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0015",
+   "answerable": true,
+   "declined": false,
+   "secs": 10.1,
+   "chars": 609,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "ambiguous",
+    "rewritten_query": "How does temperature affect liquid viscosity?",
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 0.5,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 2,
+     "uncited": 2,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.8,
+    "cited_fraction": 0.4
+   },
+   "answer": "A one-sentence direct answer: The viscosity of liquids decreases with temperature.\n\nExplanation in the terminology of the prescribed textbook: The prescribed textbook states that the viscosity of liquids decreases with temperature.\n\nGoverning formula: None applicable in this context.\n\nA worked example or application: Not applicable in this context as the question asks for the effect of temperature on viscosity, not a specific example or application.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0016",
+   "answerable": true,
+   "declined": false,
+   "secs": 11.6,
+   "chars": 801,
+   "citations": 0,
+   "sources": 5,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 1,
+     "uncited": 3,
+     "miscited": 0,
+     "unsupported": 4
+    },
+    "grounded_fraction": 0.5,
+    "cited_fraction": 0.12
+   },
+   "answer": "A one-sentence direct answer: The function of time which is not periodic among the options is (C) ωt−e.\n\nExplanation in the terminology of the prescribed textbook: The prescribed textbook states that the function e – ωt is not periodic, it decreases monotonically with increasing time and tends to zero as t → ∞. This function never repeats its value, thus it is not periodic.\n\nGoverning formula: None applicable in this context.\n\nA worked example or application: Not applicable in this context as the question asks for the effect of time on the periodicity of the given functions.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0017",
+   "answerable": true,
+   "declined": false,
+   "secs": 16.0,
+   "chars": 1629,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 1
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 2,
+     "uncited": 6,
+     "miscited": 0,
+     "unsupported": 3
+    },
+    "grounded_fraction": 0.73,
+    "cited_fraction": 0.18
+   },
+   "answer": "A one-sentence direct answer: The trajectory of a projectile can be shown to be a parabola by eliminating time from the equations of motion for x and y.\n\nExplanation in the terminology of the prescribed textbook: The prescribed textbook states that the trajectory of a projectile is a parabola, which can be demonstrated by eliminating time from the equations of motion for x and y. This simplification results in an equation of the form y = a x + b x^2, where a and b are constants, which is the equation of a parabola.\n\nGoverning formula: The trajectory of a projectile is derived from the equations of motion for x and y, which are given by x = (vo cos θo)t and y = (vo sin θo)t - (1/2)gt^2. Eliminating time from these equations yields the trajectory equation y = (vo sin θo)x - (1/2)gt^2, where g is the acceleration due to gravity. This equation is of the form y = ax + bx^2, which is the equation of a parabola.\n\nWorked example or application: Not applicable in this context as the question asks for the derivation of the trajectory equation, not a specific example or application.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: The information provided in the context covers the necessary steps to solve the problem, including the equations of motion for x and y and the elimination of time to derive the trajectory equation.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 4 statements could not be traced to the retrieved passages.\n\nCheck before relying on this: 3 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0018",
+   "answerable": true,
+   "declined": false,
+   "secs": 10.4,
+   "chars": 711,
+   "citations": 0,
+   "sources": 6,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 2,
+     "miscited": 0,
+     "unsupported": 4
+    },
+    "grounded_fraction": 0.33,
+    "cited_fraction": 0.0
+   },
+   "answer": "A one-sentence direct answer: According to kinetic theory of gases, collisions between the molecules of a gas are elastic.\n\nExplanation in the terminology of the prescribed textbook: The prescribed textbook states that collisions between molecules of a gas are elastic, implying that the total kinetic energy is conserved during these collisions.\n\nGoverning formula: None applicable in this context.\n\nA worked example or application: Not applicable in this context as the question asks for the nature of collisions, not a specific example or application.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 4 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-0019",
+   "answerable": true,
+   "declined": false,
+   "secs": 19.0,
+   "chars": 1783,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 2,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 1,
+     "uncited": 7,
+     "miscited": 0,
+     "unsupported": 2
+    },
+    "grounded_fraction": 0.8,
+    "cited_fraction": 0.1
+   },
+   "answer": "A one-sentence direct answer: The expressions for the final velocities of two particles undergoing a completely elastic collision in one-dimension, with the second body initially at rest, are v1f = v1i and v2f = 2v1i / m1, where v1i is the initial velocity of the first particle and m1 is its mass.\n\nExplanation in the terminology of the prescribed textbook: The prescribed textbook states that in a completely elastic collision where the second body is initially at rest, the first particle's final velocity remains the same as its initial velocity, v1f = v1i. The second particle's final velocity is twice the initial velocity of the first particle, v2f = 2v1i / m1.\n\nGoverning formula: The expressions for the final velocities in a completely elastic collision are derived from the conservation of momentum and kinetic energy. The momentum conservation equation is m1v1i = m1v1f + m2v2f, and the kinetic energy conservation equation is 1/2 m1v1i^2 = 1/2 m1v1f^2 + 1/2 m2v2f^2. Given that the second body is initially at rest (m2 = 0), the equations simplify to m1v1i = m1v1f and 1/2 m1v1i^2 = 1/2 m1v1f^2. Solving these equations yields v1f = v1i and v2f = 2v1i / m1.\n\nWorked example or application: Not applicable in this context as the question asks for the expressions for the final velocities, not a specific example or application.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: The information provided in the context covers the necessary steps to solve the problem, including the conservation of momentum and kinetic energy equations, and the derivation of the expressions for the final velocities in a completely elastic collision.\n\nCheck before relying on this: 2 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0020",
+   "answerable": true,
+   "declined": true,
+   "secs": 3.5,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "What are the criteria for numerical problem answers?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-0021",
+   "answerable": true,
+   "declined": false,
+   "secs": 42.9,
+   "chars": 5306,
+   "citations": 3,
+   "sources": 6,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 1
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 1,
+     "uncited": 10,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.09
+   },
+   "answer": "a) To prove Snell's law of refraction, we start with the geometry of the situation. Consider a plane wavefront passing from a rarer medium (with refractive index \\(n_1\\)) to a denser medium (with refractive index \\(n_2\\)). The angle of incidence is \\(i\\) and the angle of refraction is \\(r\\). The normal to the interface at the point of incidence is perpendicular to the interface.\n\n[1] 132ndPhysicsPart-2.pdf, page 26: m fr om the mirr or, is ( 1 / 280 ) m s – 1 similarly, it can be seen that for u = – 29 m, – 19 m and – 9 m, the speed with which the image appears to move is – 1 – 1 – 1 1 1 1 m s, m s and m s, 150 60 10 respectively. although the jogger has been moving with a constant speed, the speed of his / her image appears to increase substantially as he / she moves closer to the mirr or. this phenomenon can be noticed by any person sitting in a stationary car or a bus. in case of moving vehicles, a similar phenomenon could be observed if the vehicle in the rear is moving closer with a constant speed.\n\n[2] 132ndPhysicsPart-2.pdf, page 68: ##2 alone. but now rotating p1 has a dramatic effect on the light coming from p2. in one position, the intensity transmitted by p2 followed by p1 is nearly zero. when turned by 90° from this position, p1 transmits nearly the full intensity emerging from p2 ( fig. 10. 18 ). the experiment at figure 10. 18 can be easily understood by assuming that light passing through the polaroid p2 gets polarised along the pass - axis of p2. if the pass - axis of p2 makes an angle q with the pass - axis of p1, then when the polarised beam passes through the polaroid p2, the component e cos q ( along the pass - axis of p2 ) will pass through p2. thus, as we rotate the polaroid p1 ( or p2 ), the intensity will vary as : i = i0 cos2q ( 10. 18 ) where i0 is the intensity of the polarized light after passing through p1. this is known as malus ’ law.\n\n[3] 132ndPhysicsPart-2.pdf, page 70: physics 272 points to ponder 1. waves from a point sour ce spread out in all dir ections, while light was seen to travel along narrow rays. it required the insight and experiment of huygens, young and fresnel to understand how a wave theory could explain all aspects of the behaviour of light. 2. the crucial new feature of waves is interference of amplitudes from different sources which can be both constructive and destructive, as shown in young ’ s experiment. 3. diffraction phenomena define the limits of ray optics. the limit of the ability of microscopes and telescopes to distinguish very close objects is set by the wavelength of light. 4. most interference and diffraction effects exist even for longitudinal waves like sound in air. but polarisation phenomena ar e special to transverse waves like light waves. summary 1. huygens ’ principle tells us that each point on a wavefront is a source of secondary waves, which add up to give the wavefront at a later time. 2. huygens ’ construction tells us that the new wavefront is the forward envelope of the secondary waves. when the speed of light is independent of direction, the secondary waves are spherical. the rays are then perpendicular to both the wavefronts and the time of travel is the same measured along any ray. this principle leads to the well known laws of reflection and refraction. 3. the principle of superposition of waves applies whenever two or more sources of light illuminate the same point. when we consider the intensity of light due to these sources at the given point, there is an interference term in addition to the sum of the individual intensities. but this term is important only if it has a non - zero average, which occurs only if the sources have the same frequency and a stable phase difference. 4. young ’ s double slit of separation d gives equally spaced inter ference fringes. 5. a single slit of width a gives a diffraction pattern with a central maximum. the intensity falls to zero at angles of 2,, a a λ λ ± ± etc., with successively weaker secondary maxima in between. 6. natural light, e. g., from the sun is unpolarised. this means the electric vector takes all possible directions in the transverse plane, rapidly and randomly, during a measurement. a polaroid transmits only one component ( parallel to a special axis ). the resulting light is called linearly polarised or\n\na) To prove Snell's law of refraction, we start with the geometry of the situation. Consider a plane wavefront passing from a rarer medium (with refractive index \\(n_1\\)) to a denser medium (with refractive index \\(n_2\\)). The angle of incidence is \\(i\\) and the angle of refraction is \\(r\\). The normal to the interface at the point of incidence is perpendicular to the interface. By applying Snell's law, we have:\n\n\\[\nn_1 \\sin i = n_2 \\sin r\n\\]\n\nThis equation states that the ratio of the sine of the angle of incidence to the sine of the angle of refraction is constant. This is the law of refraction, also known as Snell's law. This law is derived from the principle of superposition of waves, where the light rays from the incident medium and the refracted medium interfere constructively or destructively, leading to the observed path of the refracted ray. This derivation is consistent with the observed phenomenon of light bending when passing from a rarer to a denser medium."
+  },
+  {
+   "id": "phys-PUC2-0022",
+   "answerable": true,
+   "declined": false,
+   "secs": 15.1,
+   "chars": 1252,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 2,
+    "action": "ambiguous",
+    "rewritten_query": "PUC2 physics E part for visually impaired",
+    "dropped": 1,
+    "boilerplate_removed": 2,
+    "best_grade": 0.5
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 2,
+     "uncited": 3,
+     "miscited": 0,
+     "unsupported": 5
+    },
+    "grounded_fraction": 0.5,
+    "cited_fraction": 0.2
+   },
+   "answer": "1. A one-sentence direct answer.\nThe Higgs mechanism and electroweak symmetry breaking can be explained through the Higgs field, which gives particles their mass.\n\n2. The explanation, in the terminology of the prescribed textbook.\nThe Higgs mechanism involves a Higgs field permeating the universe. This field interacts with other particles, imparting them mass. Electroweak symmetry breaking refers to the transition from a state where the electromagnetic and weak forces are unified to the current state where they are distinct.\n\n3. Any governing formula, with every symbol defined and SI units given.\n\\[ m_H = \\frac{1}{2} m \\left( \\frac{4 \\pi \\alpha}{\\beta} \\right)^2 \\]\nwhere \\( m_H \\) is the Higgs boson mass, \\( m \\) is the mass of the W and Z bosons, \\( \\alpha \\) is the fine-structure constant, and \\( \\beta \\) is a dimensionless parameter related to the Higgs vacuum expectation value.\n\n4. A worked example or application only if the context contains one.\nThe context does not contain a worked example or application related to the Higgs mechanism and electrowak symmetry breaking. Therefore, no worked example can be provided from the given context.\n\nCheck before relying on this: 5 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0023",
+   "answerable": true,
+   "declined": false,
+   "secs": 8.6,
+   "chars": 700,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 0,
+     "uncited": 4,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "a) Magnetic susceptibility is a scalar quantity that describes how a material responds to an external magnetic field. For a given material, it is the ratio of the magnetization to the applied magnetic field.\n\nb) Magnetic relative permeability, denoted as \\(\\mu_r\\), is a dimensionless quantity that represents how much a material's magnetic permeability \\(\\mu\\) exceeds the permeability of free space \\(\\mu_0\\). It is defined as \\(\\mu_r = \\frac{\\mu}{\\mu_0}\\).\n\nThe expression relating magnetic susceptibility \\(\\chi\\) and magnetic relative permeability \\(\\mu_r\\) is given by:\n\\[\n\\mu_r = 1 + \\chi\n\\]\n\nWhere \\(\\mu_r\\) is the relative magnetic permeability and \\(\\chi\\) is the magnetic susceptibility."
+  },
+  {
+   "id": "phys-PUC2-0024",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.2,
+   "chars": 691,
+   "citations": 0,
+   "sources": 4,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Which physicist proposed equations for electromagnetic waves?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 1
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 5,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.83,
+    "cited_fraction": 0.0
+   },
+   "answer": "The existence of electromagnetic waves was given by d) JC Maxwell.\n\nJC Maxwell, a Scottish physicist, derived the equations that describe the behavior of electric and magnetic fields. These equations, known as Maxwell's equations, predict the existence of electromagnetic waves. Maxwell's work was a culmination of the laws of electricity and magnetism, including those discovered by Coulomb, Oersted, Ampère, and Faraday. Although Faraday's laws of electromagnetic induction are fundamental to understanding how changes in electric fields can induce magnetic fields, it was Maxwell who unified these laws into a set of equations that also predicted the existence of electromagnetic waves."
+  },
+  {
+   "id": "phys-PUC2-0025",
+   "answerable": true,
+   "declined": false,
+   "secs": 17.3,
+   "chars": 1156,
+   "citations": 0,
+   "sources": 6,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Band theory solid classification intrinsic vs extrinsic semiconductors",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 4,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 9,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.9,
+    "cited_fraction": 0.0
+   },
+   "answer": "a) Using band theory, solids can be classified into different categories based on the energy levels of their electrons. In intrinsic semiconductors, the valence band and conduction band are separated by a small gap. Electrons can move freely between these bands, making them conductive. In contrast, in extrinsic semiconductors, the valence band and conduction band are much closer together, creating a larger energy gap. This larger gap makes it more difficult for electrons to jump from the valence band to the conduction band, thus reducing conductivity.\n\nb) The main differences between intrinsic and extrinsic semiconductors are:\n1. Intrinsic semiconductors have a small energy gap between the valence band and the conduction band, allowing electrons to easily move between these bands. Extrinsic semiconductors have a larger energy gap, making it harder for electrons to move between the bands.\n2. In intrinsic semiconductors, the number of electrons (majority carriers) and holes (minority carriers) are equal. In extrinsic semiconductors, the number of majority and minority carriers can be significantly different due to the presence of dopants."
+  },
+  {
+   "id": "phys-PUC2-0026",
+   "answerable": true,
+   "declined": false,
+   "secs": 14.3,
+   "chars": 1272,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 5,
+     "miscited": 0,
+     "unsupported": 6
+    },
+    "grounded_fraction": 0.45,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A one-sentence direct answer.\nExtrinsic semiconductors are created by doping pure semiconductors with impurity atoms to change their electrical properties.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nExtrinsic semiconductors are created by doping pure semiconductors with impurity atoms. Pentavalent impurities like phosphorus (P) are used to create n-type semiconductors, where electrons become the majority carriers. Trivalent impurities like boron (B) are used to create p-type semiconductors, where holes become the majority carriers.\n\n3. Any governing formula, with every symbol defined and SI units given.\nThe relationship between the number of majority carriers (ne) and minority carriers (nh) in p-type and n-type semiconductors is given by:\n\\[ ne > nh \\quad \\text{for p-type semiconductors} \\]\n\\[ nh > ne \\quad \\text{for n-type semiconductors} \\]\n\n4. A worked example or application only if the context contains one.\nNo worked example can be provided from the given context.\n\n2. Fill in the blanks.\n[electrostatic potential, refraction, reflection, Iron, linear, zero]\n1. Electrostatic potential\n2. Reflection\n3. Refraction\n4. Iron\n5. Linear\n\nCheck before relying on this: 6 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0027",
+   "answerable": true,
+   "declined": false,
+   "secs": 9.8,
+   "chars": 851,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 3,
+     "uncited": 2,
+     "miscited": 0,
+     "unsupported": 4
+    },
+    "grounded_fraction": 0.56,
+    "cited_fraction": 0.33
+   },
+   "answer": "1. A one-sentence direct answer.\nThermionic emission is the process by which electrons are emitted from a metal surface by heating.\n2. The explanation, in the terminology the prescribed textbook uses.\nThermionic emission is the emission of electrons from a metal surface when it is heated to a temperature above its Fermi level, causing the electrons to overcome the potential barrier and escape into the vacuum.\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for thermionic emission in the retrieved sources.\n4. A worked example or application only if the context contains one.\nNo worked example can be provided from the given context.\n\nThe depth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 4 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0028",
+   "answerable": true,
+   "declined": false,
+   "secs": 10.6,
+   "chars": 1089,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 7,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.88,
+    "cited_fraction": 0.0
+   },
+   "answer": "A pure resistive circuit, such as the one analyzed in the context provided, shows that the voltage and current are in phase. This means the phase difference between the peak value of voltage and current is zero.\n\nIn a purely resistive circuit, the voltage and current are in phase. The analysis of the circuit is facilitated by the use of phasors, where the voltage and current phasors rotate about the origin with angular speed \\(\\omega\\). The vertical components of these phasors represent the sinusoidally varying quantities, and the magnitudes of these phasors represent the amplitudes or peak values of the voltage and current. \n\nIn the context, it is mentioned that for a resistor, the voltage and current phasors are in the same direction, indicating that the phase angle between the voltage and current is zero. \n\nTherefore, the phase difference between the peak value of voltage and current in a pure resistive circuit is zero. \n\nDepth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0029",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.2,
+   "chars": 1057,
+   "citations": 1,
+   "sources": 6,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 5,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 5,
+     "miscited": 0,
+     "unsupported": 6
+    },
+    "grounded_fraction": 0.45,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A one-sentence direct answer.\nDiamagnetic substances have the tendency to move from stronger to the weaker part of the external magnetic field.\n2. The explanation, in the terminology the prescribed textbook uses.\nDiamagnetic substances are those which have a tendency to move from regions of stronger magnetic fields to regions of weaker magnetic fields. This is in contrast to ferromagnetic and paramagnetic substances, which have opposite tendencies.\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for the magnetic properties of these substances in the retrieved sources.\n4. A worked example or application only if the context contains one.\nNo worked example can be provided from the given context.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages.\n[1] 73 2nd PUC - Physics- Part-1--2022.pdf, page 208\n\nCheck before relying on this: 6 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0030",
+   "answerable": true,
+   "declined": false,
+   "secs": 24.7,
+   "chars": 1911,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Convex lens image formation: position, magnification, height change 30cm, 14cm, 21cm, PUC2",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 3
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 6,
+     "miscited": 0,
+     "unsupported": 6
+    },
+    "grounded_fraction": 0.5,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A one-sentence direct answer.\nThe image formed by the convex lens when the object is placed at 21 cm in front of it is located at a position that can be calculated using the lens formula.\n2. The explanation, in the terminology the prescribed textbook uses.\nThe image formed by the convex lens when the object is placed at 21 cm in front of it will be located at a position that can be calculated using the lens formula. The magnification of the image can also be determined based on the object distance and the focal length of the lens.\n3. Any governing formula, with every symbol defined and SI units given.\nThe lens formula is given by:\n\\[ \\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u} \\]\nwhere \\( f \\) is the focal length, \\( v \\) is the image distance, and \\( u \\) is the object distance. The magnification \\( m \\) is given by:\n\\[ m = \\frac{v}{u} = \\frac{-f}{u + f} \\]\n4. A worked example or application only if the context contains one.\nGiven the focal length \\( f = 14 \\) cm and the object distance \\( u = -21 \\) cm (negative sign indicates the object is on the left side of the lens), we can use the lens formula to find the image distance \\( v \\):\n\\[ \\frac{1}{14} = \\frac{1}{v} + \\frac{1}{-21} \\]\n\\[ \\frac{1}{v} = \\frac{1}{14} - \\frac{1}{21} \\]\n\\[ \\frac{1}{v} = \\frac{21 - 14}{14 \\times 21} = \\frac{7}{294} = \\frac{1}{42} \\]\n\\[ v = 42 \\text{ cm} \\]\nThe magnification \\( m \\) is:\n\\[ m = \\frac{v}{u} = \\frac{42}{-21} = -2 \\]\nThe height of the image \\( h_i \\) is:\n\\[ h_i = m \\times h_o = -2 \\times 3.0 \\text{ cm} = -6.0 \\text{ cm} \\]\nIf the object is moved further away from the lens, the image distance \\( v \\) will change, and the magnification \\( m \\) will also change. The height of the image will be affected by the change in magnification. The image will still be virtual and upright, but its size will change.\n\nCheck before relying on this: 6 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0031",
+   "answerable": true,
+   "declined": false,
+   "secs": 21.8,
+   "chars": 1761,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 1
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 0,
+     "uncited": 5,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nThe average power in an AC LCR circuit can be expressed as \\( \\text{P}_{\\text{avg}} = \\frac{1}{2} V_{\\text{rms}} I_{\\text{rms}} \\cos(\\phi) \\), where \\( V_{\\text{rms}} \\) is the root mean square voltage, \\( I_{\\text{rms}} \\) is the root mean square current, and \\( \\phi \\) is the phase angle between the voltage and current.\n\nThe explanation, in the terminology the prescribed textbook uses:\nThe average power in an AC LCR circuit is given by the formula \\( \\text{P}_{\\text{avg}} = \\frac{1}{2} V_{\\text{rms}} I_{\\text{rms}} \\cos(\\phi) \\), where \\( V_{\\text{rms}} \\) is the root mean square voltage, \\( I_{\\text{rms}} \\) is the root mean square current, and \\( \\phi \\) is the phase angle between the voltage and current. This formula takes into account the power factor, which is the cosine of the phase angle \\( \\phi \\).\n\nThe governing formula, with every symbol defined and SI units given:\nThe average power in an AC LCR circuit is given by:\n\\[\n\\text{P}_{\\text{avg}} = \\frac{1}{2} V_{\\text{rms}} I_{\\text{rms}} \\cos(\\phi)\n\\]\nwhere:\n- \\( V_{\\text{rms}} \\) is the root mean square voltage, with units of volts (V).\n- \\( I_{\\text{rms}} \\) is the root mean square current, with units of amperes (A).\n- \\( \\phi \\) is the phase angle between the voltage and current, with units of radians (rad).\n\nA worked example or application only if the context contains one:\nGiven a series LCR circuit with \\( V_{\\text{rms}} = 220 \\text{ V} \\), \\( I_{\\text{rms}} = 10 \\text{ A} \\), and \\( \\cos(\\phi) = 0.8 \\), the average power \\( \\text{P}_{\\text{avg}} \\) can be calculated as:\n\\[\n\\text{P}_{\\text{avg}} = \\frac{1}{2} \\times 220 \\text{ V} \\times 10 \\text{ A} \\times 0.8 = 880 \\text{ W}\n\\]\n\nDepth a 5-mark answer would earn: complete but not padded."
+  },
+  {
+   "id": "phys-PUC2-0032",
+   "answerable": true,
+   "declined": false,
+   "secs": 16.9,
+   "chars": 1423,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 0,
+     "uncited": 7,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nKirchhoff's rules are two fundamental principles used in analyzing electric circuits, which help to determine the currents and voltages in a network.\nThe explanation, in the terminology the prescribed textbook uses:\nKirchhoff's rules consist of two fundamental principles: Kirchhoff's Current Law (KCL) and Kirchhoff's Voltage Law (KVL). KCL states that the sum of currents entering a junction must equal the sum of currents leaving the junction, while KVL states that the algebraic sum of voltages around any closed loop in a circuit must be zero.\nThe governing formula, with every symbol defined and SI units given:\nKirchhoff's Current Law (KCL): \n\\\\[ \\sum_{i=1}^{n} I_i = 0 \\]\nwhere \\\\( I_i \\\\) represents the current flowing into or out of a junction.\nKirchhoff's Voltage Law (KVL): \n\\\\[ \\sum_{i=1}^{n} V_i = 0 \\]\nwhere \\\\( V_i \\\\) represents the voltage across each element in a loop.\nA worked example or application only if the context contains one:\nGiven a simple circuit with a battery and two resistors in series, the application of KCL and KVL would allow us to determine the currents and voltages in the circuit. For instance, if a battery with emf \\\\( \\epsilon \\\\) and internal resistance \\\\( r \\\\) is connected in series with two resistors \\\\( R_1 \\\\) and \\\\( R_2 \\\\), KCL and KVL would be used to find the currents through each resistor and the terminal voltage of the battery."
+  },
+  {
+   "id": "phys-PUC2-0033",
+   "answerable": true,
+   "declined": false,
+   "secs": 7.3,
+   "chars": 370,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 3,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.75,
+    "cited_fraction": 0.0
+   },
+   "answer": "Two properties of electric field lines are:\n1. Field lines start from positive charges and end at negative charges.\n2. In a charge-free region, electric field lines can be taken as continuous curves without any breaks.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0034",
+   "answerable": true,
+   "declined": false,
+   "secs": 16.1,
+   "chars": 1752,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 2,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 6,
+     "miscited": 0,
+     "unsupported": 4
+    },
+    "grounded_fraction": 0.6,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A one-sentence direct answer:\nThe depletion region of a p-n junction under unbiased conditions consists of immobile positive and negative charges on either side of the junction.\n\n2. The explanation, in the terminology the prescribed textbook uses:\nWhen a p-n junction is unbiased, the diffusion of electrons from the n-side and holes from the p-side stops, forming a region with immobile positive ions (holes) on the n-side and immobile negative ions (electrons) on the p-side, creating a depletion region.\n\n3. Any governing formula, with every symbol defined and SI units given:\nNo governing formula is provided for the magnetic properties of these substances in the retrieved sources.\n\n4. A worked example or application only if the context contains one:\nNo worked example can be provided from the given context.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\n1. A one-sentence direct answer:\nRectification is the process of converting alternating current (AC) into direct current (DC) by means of a p-n junction diode.\n\n2. The explanation, in the terminology the prescribed textbook uses:\nRectification refers to the process of converting alternating current (AC) into direct current (DC) by using a p-n junction diode, which allows current to flow in one direction only.\n\n3. Any governing formula, with every symbol defined and SI units given:\nNo governing formula is provided for the magnetic properties of these substances in the retrieved sources.\n\n4. A worked example or application only if the context contains one:\nNo worked example can be provided from the given context.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 4 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0035",
+   "answerable": true,
+   "declined": false,
+   "secs": 22.8,
+   "chars": 1776,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": false,
+    "counts": {
+     "supported": 0,
+     "uncited": 5,
+     "miscited": 0,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A one-sentence direct answer:\nUsing Ampere's circuital law, the magnetic field due to a straight infinite conductor carrying current can be derived.\n\n2. The explanation, in the terminology the prescribed textbook uses:\nThe magnetic field around a straight infinite current-carrying wire can be determined using Ampere's circuital law, which relates the magnetic field to the current enclosed by a closed path.\n\n3. Any governing formula, with every symbol defined and SI units given:\nAmpere's circuital law states that the line integral of the magnetic field (B) around a closed path is equal to the permeability of free space (μ₀) times the enclosed current (I) divided by 2π times the path length (l):\n\\\\[ \\oint B \\cdot dl = \\mu_0 I_{\\text{enc}} \\]\nThe magnetic field (B) is tangential to the path and is constant along the path, so:\n\\\\[ B \\oint dl = \\mu_0 I_{\\text{enc}} \\]\nTherefore, the magnetic field (B) at a distance r from the wire is:\n\\\\[ B = \\frac{\\mu_0 I}{2\\pi r} \\]\n\n4. A worked example or application only if the context contains one:\nGiven a straight infinite wire with a current I, the magnetic field at a distance r from the wire can be calculated using the formula derived:\n\\\\[ B = \\frac{\\mu_0 I}{2\\pi r} \\]\nwhere:\n- \\\\( \\mu_0 \\\\) is the permeability of free space, approximately \\( 4\\pi \\times 10^{-7} \\, \\text{T}\\cdot\\text{m/A} \\).\n- \\\\( I \\\\) is the current in the wire.\n- \\\\( r \\\\) is the distance from the wire.\n\nFor example, if the current I is 5 A and the distance r is 0.1 m, the magnetic field B would be:\n\\\\[ B = \\frac{4\\pi \\times 10^{-7} \\, \\text{T}\\cdot\\text{m/A} \\times 5 \\, \\text{A}}{2\\pi \\times 0.1 \\, \\text{m}} = 0.00012566 \\, \\text{T} \\approx 1.26 \\times 10^{-4} \\, \\text{T} \\]\n\nDepth a 5-mark answer would earn: complete but not padded."
+  },
+  {
+   "id": "phys-PUC2-0036",
+   "answerable": true,
+   "declined": false,
+   "secs": 18.7,
+   "chars": 1839,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "ambiguous",
+    "rewritten_query": "What is nuclear fusion? Why called thermonuclear?",
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 0.5,
+    "restored": 1
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 9,
+     "miscited": 0,
+     "unsupported": 3
+    },
+    "grounded_fraction": 0.75,
+    "cited_fraction": 0.0
+   },
+   "answer": "1. A one-sentence direct answer:\nNuclear fusion is a process where two or more atomic nuclei combine to form a single heavier nucleus, releasing a significant amount of energy.\n\n2. The explanation, in the terminology the prescribed textbook uses:\nNuclear fusion is a process where two or more atomic nuclei combine to form a single heavier nucleus, releasing a significant amount of energy. This process is central to the energy production in stars, including our Sun.\n\n3. Any governing formula, with every symbol defined and SI units given:\nNo governing formula is provided for the magnetic properties of these substances in the retrieved sources.\n\n4. A worked example or application only if the context contains one:\nNo worked example can be provided from the given context.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\n1. A one-sentence direct answer:\nNuclear fusion is called a thermonuclear reaction because it requires extremely high temperatures to initiate and sustain the fusion of atomic nuclei.\n\n2. The explanation, in the terminology the prescribed textbook uses:\nNuclear fusion is called a thermonuclear reaction because it requires extremely high temperatures to initiate and sustain the fusion of atomic nuclei. These high temperatures are necessary to overcome the electrostatic repulsion between positively charged nuclei, allowing them to fuse.\n\n3. Any governing formula, with every symbol defined and SI units given:\nNo governing formula is provided for the magnetic properties of these substances in the retrieved sources.\n\n4. A worked example or application only if the context contains one:\nNo worked example can be provided from the given context.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 3 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0037",
+   "answerable": true,
+   "declined": false,
+   "secs": 10.7,
+   "chars": 818,
+   "citations": 4,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 1,
+     "uncited": 1,
+     "miscited": 1,
+     "unsupported": 0
+    },
+    "grounded_fraction": 1.0,
+    "cited_fraction": 0.33
+   },
+   "answer": "Statement I: Wave fronts obtained from a point source of light in an isotropic medium are always spherical at finite distance. [1]\nStatement II: Speed of light in an isotropic medium is constant. [2]\n\nOnly Statement I is correct. [1] discusses the formation of wave fronts from a point source in an isotropic medium, and these wave fronts are indeed spherical at finite distances. Statement II, however, is not correct as the speed of light can vary in different media, and even in a vacuum, it can be affected by gravity and other factors. [2] mentions that the speed of light in a vacuum is constant, but it does not address the formation of wave fronts from a point source. Therefore, the correct answer is a) Only Statement I is correct.\n\nCheck before relying on this: 1 cites a passage that does not support it."
+  },
+  {
+   "id": "phys-PUC2-0038",
+   "answerable": true,
+   "declined": false,
+   "secs": 15.8,
+   "chars": 1304,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 1,
+     "uncited": 4,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.83,
+    "cited_fraction": 0.17
+   },
+   "answer": "1. A one-sentence direct answer:\nThe electrostatic potential is equal to work done to transfer unit positive test charge from infinity to a point in the electric field, opposite to the field.\n\n2. The explanation, in the terminology the prescribed textbook uses:\nThe electrostatic potential at a point is defined as the work done in bringing a unit positive test charge from infinity to that point, against the electric field.\n\n3. Any governing formula, with every symbol defined and SI units given:\nThe electrostatic potential \\( V \\) at a point due to a charge \\( q_1 \\) is given by:\n\\[ V = \\frac{1}{4 \\pi \\epsilon_0} \\frac{q_1}{r} \\]\nwhere:\n- \\( \\epsilon_0 \\) is the permittivity of free space, approximately \\( 8.85 \\times 10^{-12} \\, \\text{C}^2/\\text{N}\\cdot\\text{m}^2 \\).\n- \\( q_1 \\) is the charge producing the potential.\n- \\( r \\) is the distance from the charge \\( q_1 \\) to the point where the potential is being calculated.\n\n4. A worked example or application only if the context contains one:\nNo worked example can be provided from the given context.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 3 statements could not be traced to the retrieved passages.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-0039",
+   "answerable": true,
+   "declined": false,
+   "secs": 13.9,
+   "chars": 987,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Charge density definition textbook",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 2
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 3,
+    "verified": true,
+    "counts": {
+     "supported": 1,
+     "uncited": 4,
+     "miscited": 0,
+     "unsupported": 1
+    },
+    "grounded_fraction": 0.83,
+    "cited_fraction": 0.17
+   },
+   "answer": "1. A one-sentence direct answer:\nThe ratio of electric charge to the length is volume charge density.\n\n2. The explanation, in the terminology the prescribed textbook uses:\nThe volume charge density is defined as the charge per unit volume, which is the ratio of the charge to the length in a volume element.\n\n3. Any governing formula, with every symbol defined and SI units given:\nThe volume charge density \\(\\rho\\) is given by:\n\\[ \\rho = \\frac{q}{v} \\]\nwhere:\n- \\(\\rho\\) is the volume charge density, units: \\(\\text{C/m}^3\\).\n- \\(q\\) is the charge, units: \\(\\text{C}\\).\n- \\(v\\) is the volume, units: \\(\\text{m}^3\\).\n\n4. A worked example or application only if the context contains one:\nNo worked example can be provided from the given context.\n\nDepth a 5-mark answer would earn: complete but not padded.\n\nCheck before relying on this: 3 statements could not be traced to the retrieved passages.\n\nCheck before relying on this: 1 statement could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC1-oos-0150",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.2,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "What is Higgs mechanism? How does it break electroweak symmetry?",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-oos-0151",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.0,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "What is derivation of Schwarzschild metric from Einstein eqs?",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-oos-0152",
+   "answerable": false,
+   "declined": true,
+   "secs": 4.2,
+   "chars": 256,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 1,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 1,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 0,
+     "miscited": 0,
+     "unsupported": 2
+    },
+    "grounded_fraction": 0.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed.\n\nCheck before relying on this: 2 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "phys-PUC2-oos-0153",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.9,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "Higgs mechanism electroweak symmetry breaking textbook",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-oos-0154",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.9,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "What is derivation of Schwarzschild metric from Einstein eqs?",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-oos-0155",
+   "answerable": false,
+   "declined": true,
+   "secs": 2.2,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "What is renormalization in QED?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "chem-PUC1-oos-0156",
+   "answerable": false,
+   "declined": false,
+   "secs": 12.6,
+   "chars": 1121,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Suzuki-Miyaura cross-coupling reaction mechanism",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0,
+    "restored": 1
+   },
+   "grounding": {
+    "dangling_citations": [],
+    "passages": 1,
+    "verified": true,
+    "counts": {
+     "supported": 0,
+     "uncited": 0,
+     "miscited": 0,
+     "unsupported": 6
+    },
+    "grounded_fraction": 0.0,
+    "cited_fraction": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nThe Suzuki-Miyaura cross-coupling reaction involves the formation of a carbon-carbon bond between an aryl halide and a boronic acid or alcohol, catalyzed by a palladium complex, leading to the formation of an aryl-boron or aryl-alkyl compound.\n\nExplanation:\nThe reaction mechanism begins with the aryl halide reacting with the boronic acid or alcohol in the presence of a base, forming a complex intermediate. This intermediate undergoes a reductive elimination, resulting in the formation of the desired aryl-boron or aryl-alkyl compound.\n\nGoverning formula:\nArX + R′B(OH)2 → ArR′ + BH3X\n\nWorked example:\nConsider the reaction of benzyl bromide with ethyl boronic acid in the presence of palladium acetate and sodium carbonate. The benzyl bromide reacts with the ethyl boronic acid to form a complex intermediate, which then undergoes reductive elimination to yield the desired product, benzyl ethyl ether.\n\nA 5-mark answer would include the mechanism, the governing formula, and a worked example.\n\nCheck before relying on this: 6 statements could not be traced to the retrieved passages."
+  },
+  {
+   "id": "chem-PUC1-oos-0157",
+   "answerable": false,
+   "declined": true,
+   "secs": 3.3,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Molecular dynamics protein tertiary structure prediction",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "grounding": {},
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  }
+ ]
+}

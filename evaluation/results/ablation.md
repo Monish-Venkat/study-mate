@@ -1,0 +1,9 @@
+Benchmark items per configuration: 48
+
+| Configuration | Passages | Cite rate | Abst. P | Abst. R | False abst. | Latency (s) |
+|---|---|---|---|---|---|---|
+| Vanilla RAG | 4.90 | 0.45 | 1.00 | 0.62 | 0 | 13.3 |
+| + boilerplate filter | 4.81 | 0.00 | 1.00 | 0.62 | 0 | 14.0 |
+| + CRAG | 1.08 | 0.00 | 0.42 | 1.00 | 11 | 11.5 |
+| + filter + CRAG (3B grader) | 1.08 | 0.03 | 0.53 | 1.00 | 7 | 11.8 |
+| + filter + CRAG (strong grader) | 4.46 | 0.03 | 0.83 | 0.62 | 1 | 17.1 |

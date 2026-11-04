@@ -1,0 +1,929 @@
+{
+ "summary": {
+  "label": "full",
+  "items": 48,
+  "answered": 33,
+  "avg_secs": 11.8,
+  "avg_sources": 1.08,
+  "citation_rate": 0.025,
+  "abstention_precision": 0.533,
+  "abstention_recall": 1.0,
+  "false_abstentions": 7,
+  "avg_dropped": 3.52,
+  "avg_boilerplate_removed": 0.04
+ },
+ "rows": [
+  {
+   "id": "phys-PUC1-0000",
+   "answerable": true,
+   "declined": false,
+   "secs": 39.2,
+   "chars": 1497,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 1,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nMoon has no atmosphere because gas molecules formed on its surface would escape its gravitational pull if they have velocities larger than the escape speed, which is about 2.3 km/s.\n\nExplanation in the terminology of the prescribed textbook:\nThe absence of an atmosphere on the moon can be attributed to the gravitational pull of the moon being insufficient to retain gas molecules. The escape speed from the moon's surface is relatively low, approximately 2.3 km/s. Any gas molecules formed on the moon's surface would need to have a velocity greater than this to escape the moon's gravitational field, leading to their escape into space. This is in contrast to Earth, where the escape speed is significantly higher, approximately 11.2 km/s, allowing for the retention of an atmosphere.\n\nGoverning formula:\nNo governing formula is provided in the context, so no formula can be derived from it.\n\nA worked example or application:\nNo worked example or application is provided in the context, so no application can be derived from it.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the mention of the escape speed being about 2.3 km/s and the explanation of gas molecules needing to escape due to the moon's low gravitational pull. The answer should also include a brief explanation of why this is the case and how it relates to the absence of an atmosphere on the moon. The answer should ensure all steps are visible and logically connected."
+  },
+  {
+   "id": "phys-PUC1-0001",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.9,
+   "chars": 1259,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nThe statement \"An external force is required to keep a body in motion\" is a description of Aristotelian law of motion.\n\nExplanation in the terminology of the prescribed textbook:\nThe Aristotelian law of motion posits that for a body to maintain motion, an external force is needed. This view is flawed, as it fails to account for the role of opposing forces such as friction, which naturally cause bodies to come to rest. The law does not consider the balance of forces in motion, which is a key aspect of modern physics.\n\nGoverning formula:\nNo governing formula is provided in the context, so no formula can be derived from it.\n\nA worked example or application:\nNo worked example or application is provided in the context, so no application can be derived from it.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the mention of the opposing forces such as friction and the explanation of how these forces cause bodies to come to rest. The answer should also include a brief explanation of how the Aristotelian law of motion is flawed and why it does not account for the natural tendency of bodies to come to rest due to friction. The answer should ensure all steps are visible and logically connected."
+  },
+  {
+   "id": "phys-PUC1-0002",
+   "answerable": true,
+   "declined": false,
+   "secs": 19.0,
+   "chars": 1530,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nTo solve the problem, we need to use the relationship between the spring constant and the angular frequency of the block's oscillations.\n\nExplanation in the terminology of the prescribed textbook:\nThe angular frequency (\\(\\omega\\)) of the block's oscillations is determined by the spring constant (\\(k\\)) and the mass (\\(m\\)) of the block, using the formula \\(\\omega = \\sqrt{\\frac{k}{m}}\\).\n\nGoverning formula:\n\\[\n\\omega = \\sqrt{\\frac{k}{m}}\n\\]\nwhere \\(k = 50 \\, \\text{N/m}\\) is the spring constant and \\(m = 1 \\, \\text{kg}\\) is the mass of the block.\n\nA worked example or application:\nGiven:\n- Spring constant, \\(k = 50 \\, \\text{N/m}\\)\n- Mass, \\(m = 1 \\, \\text{kg}\\)\n\nUsing the formula:\n\\[\n\\omega = \\sqrt{\\frac{50 \\, \\text{N/m}}{1 \\, \\text{kg}}} = \\sqrt{50} \\, \\text{rad/s} = 7.07 \\, \\text{rad/s}\n\\]\n\nThe maximum speed (\\(v_{\\text{max}}\\)) of the block can be calculated using the relationship between the maximum speed and the angular frequency in simple harmonic motion, which is given by:\n\\[\nv_{\\text{max}} = \\omega \\times A\n\\]\nwhere \\(A\\) is the amplitude of the motion. Here, the amplitude \\(A = 10 \\, \\text{cm} = 0.1 \\, \\text{m}\\).\n\nThus:\n\\[\nv_{\\text{max}} = 7.07 \\, \\text{rad/s} \\times 0.1 \\, \\text{m} = 0.707 \\, \\text{m/s}\n\\]\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the calculation of the angular frequency as \\(7.07 \\, \\text{rad/s}\\) and the maximum speed as \\(0.707 \\, \\text{m/s}\\). The answer should ensure all steps are visible and logically connected."
+  },
+  {
+   "id": "phys-PUC1-0003",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.6,
+   "chars": 1203,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 2,
+    "action": "incorrect_recovered",
+    "rewritten_query": "PUC1 physics answers without diagram circuit 0 marks",
+    "dropped": 2,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nTo derive the Schwarzschild metric, one would typically use the Einstein field equations and the Schwarzschild solution, which is a solution to the Einstein field equations for a non-rotating, uncharged black hole.\nMissing part of the question is about the specific steps to derive the Schwarzschild metric from the Einstein field equations, which is not covered in the provided context.\n\nA worked example or application:\nNo worked example or application is provided in the context, so no application can be derived from it.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the mention of the Einstein field equations and the Schwarzschild solution, and a brief explanation of how these are used to derive the Schwarzschild metric. The answer should ensure all steps are visible and logically connected. However, since the specific steps to derive the metric are not provided in the context, the answer would need to include a general outline of the derivation process, such as using the Einstein field equations in the appropriate coordinate system for a spherically symmetric, static spacetime, and then solving for the metric tensor components."
+  },
+  {
+   "id": "phys-PUC1-0004",
+   "answerable": true,
+   "declined": true,
+   "secs": 3.4,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Poisson’s ratio definition textbook",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-0005",
+   "answerable": true,
+   "declined": false,
+   "secs": 32.8,
+   "chars": 2558,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Angle rope makes with vertical eq ψ",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nTo find the angle the rope makes with the vertical, we need to analyze the forces acting on the body in equilibrium.\n\nExplanation in the terminology of the prescribed textbook:\nIn equilibrium, the forces acting on the body must balance each other. The tension in the rope and the gravitational force need to be resolved into components parallel and perpendicular to the rope. The horizontal force applied to the body will cause a component of the tension in the rope to counteract this force, while the vertical component of the tension balances the gravitational force.\n\nGoverning formula:\n\\[\n\\cos \\theta = \\frac{T \\cos \\theta - F}{T \\sin \\theta}\n\\]\nwhere \\( \\theta \\) is the angle between the rope and the vertical, \\( T \\) is the tension in the rope, and \\( F \\) is the horizontal force applied (60 N).\n\nA worked example or application:\nGiven:\n- Mass of the body, \\( m = 8 \\, \\text{kg} \\)\n- Length of the rope, \\( L = 2.5 \\, \\text{m} \\)\n- Horizontal force, \\( F = 60 \\, \\text{N} \\)\n- Acceleration due to gravity, \\( g = 10 \\, \\text{m/s}^2 \\)\n\nFirst, calculate the tension \\( T \\) in the rope using the equilibrium condition:\n\\[\nT \\sin \\theta = mg\n\\]\n\\[\nT = \\frac{mg}{\\sin \\theta}\n\\]\n\nNext, resolve the horizontal forces:\n\\[\nT \\cos \\theta = F\n\\]\n\\[\nT = \\frac{F}{\\cos \\theta}\n\\]\n\nEquating the two expressions for \\( T \\):\n\\[\n\\frac{mg}{\\sin \\theta} = \\frac{F}{\\cos \\theta}\n\\]\n\\[\nmg \\cos \\theta = F \\sin \\theta\n\\]\n\\[\n\\cos \\theta = \\frac{F}{mg} \\sin \\theta\n\\]\n\\[\n\\cos \\theta = \\frac{60 \\, \\text{N}}{8 \\, \\text{kg} \\times 10 \\, \\text{m/s}^2} \\sin \\theta\n\\]\n\\[\n\\cos \\theta = 0.75 \\sin \\theta\n\\]\n\\[\n\\sin \\theta = \\frac{\\cos \\theta}{0.75}\n\\]\n\\[\n\\sin \\theta = \\frac{\\sqrt{1 - \\sin^2 \\theta}}{0.75}\n\\]\n\\[\n\\sin \\theta = \\frac{\\sqrt{1 - \\sin^2 \\theta}}{0.75}\n\\]\n\nSolving this equation for \\( \\sin \\theta \\) gives:\n\\[\n\\sin \\theta = \\sqrt{1 - \\sin^2 \\theta}\n\\]\n\\[\n\\sin^2 \\theta = 1 - \\sin^2 \\theta\n\\]\n\\[\n2 \\sin^2 \\theta = 1\n\\]\n\\[\n\\sin^2 \\theta = 0.5\n\\]\n\\[\n\\sin \\theta = \\sqrt{0.5} = 0.707\n\\]\n\nThus, the angle \\( \\theta \\) is:\n\\[\n\\theta = \\sin^{-1}(0.707) \\approx 45^\\circ\n\\]\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the calculation of the angle \\( \\theta \\) using the relationship between the tension and the forces acting on the body. The answer should ensure all steps are visible and logically connected. The answer would include the derivation of the equation for \\( \\sin \\theta \\) and the final calculation of the angle, demonstrating the use of equilibrium conditions and trigonometric relationships."
+  },
+  {
+   "id": "phys-PUC1-0006",
+   "answerable": true,
+   "declined": true,
+   "secs": 4.3,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "What are the two conditions for rigid body equilibrium?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-0007",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.8,
+   "chars": 1033,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "ambiguous",
+    "rewritten_query": "sublimation definition physics PUC1 textbook",
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 0.5
+   },
+   "answer": "A one-sentence direct answer:\nThe change from solid state to vapor state without passing through the liquid state is called sublimation.\n\nExplanation in the terminology of the prescribed textbook:\nSublimation is the process by which a solid changes directly into a gas without passing through the liquid state. It is the reverse of deposition, where a gas changes directly into a solid.\n\nGoverning formula:\nNo governing formula is provided in the context for this specific phenomenon.\n\nA worked example or application:\nNo worked example or application is provided in the context for this specific phenomenon.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of sublimation as the process by which a solid changes directly into a gas without passing through the liquid state. The answer should ensure all steps are visible and logically connected. The answer would include the definition of sublimation and its reversal, deposition, to provide a comprehensive understanding of the phenomenon."
+  },
+  {
+   "id": "phys-PUC1-0008",
+   "answerable": true,
+   "declined": true,
+   "secs": 4.3,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "First law thermodynamics states? Differences iso adiabatic processes?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-0009",
+   "answerable": true,
+   "declined": false,
+   "secs": 18.4,
+   "chars": 1698,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Newton's second law definition SI unit force",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nNewton's second law of motion states that the rate of change of momentum of an object is directly proportional to the applied force and occurs in the direction of the force.\nExplanation in the terminology of the prescribed textbook:\nNewton's second law of motion is a vector law, which means it is equivalent to three equations, one for each component of the vectors. It states that the rate of change of momentum of an object is directly proportional to the applied force and occurs in the direction of the force.\nGoverning formula:\n\\\\[ \\\\vec{F} = m \\\\vec{a} \\\\]\nwhere \\\\( \\\\vec{F} \\\\) is the net force applied, \\\\( m \\\\) is the mass of the object, and \\\\( \\\\vec{a} \\\\) is the acceleration of the object.\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of Newton's second law as a vector law and its components, and the governing formula. The answer should ensure all steps are visible and logically connected. The answer would include the definition of Newton's second law in terms of the rate of change of momentum and the relationship to the applied force and acceleration. The answer would also include the definition of force in terms of the unit of force, the newton, and its definition as one that causes an acceleration of 1 m/s² to a mass of 1 kg. The answer would explain that the unit of force is derived from the second law, and the newton is chosen as the unit because it is consistent with the second law and simplifies the expression of the law. The answer would also mention the importance of the second law in connecting the concepts of force, mass, and acceleration, and its role in the first law of motion."
+  },
+  {
+   "id": "phys-PUC1-0010",
+   "answerable": true,
+   "declined": true,
+   "secs": 3.6,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "SHM positions of zero and max potential energy",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-0011",
+   "answerable": true,
+   "declined": false,
+   "secs": 6.7,
+   "chars": 681,
+   "citations": 0,
+   "sources": 2,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nTwo methods of reducing friction are the use of ball bearings and compressed air cushions between surfaces in relative motion.\nExplanation in the terminology of the prescribed textbook:\nThe use of ball bearings between moving parts of a machine and compressed air cushions between surfaces in relative motion are two methods of reducing friction, as these devices minimize the contact area and reduce the coefficient of friction.\nGoverning formula:\nNo governing formula is provided in the context for this specific phenomenon.\nA worked example or application:\nNo worked example or application is provided in the context for this specific phenomenon."
+  },
+  {
+   "id": "phys-PUC1-0012",
+   "answerable": true,
+   "declined": false,
+   "secs": 16.3,
+   "chars": 1557,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Max heat transfer copper to ice latent heat fusion",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nTo solve this problem, we need to calculate the maximum heat transfer from the copper plate to the ice block and the maximum amount of ice that can be melted.\n\nExplanation in the terminology of the prescribed textbook:\nThe maximum heat transfer from the copper plate to the ice block occurs when all the heat from the copper plate is used to melt the ice. The specific heat capacity of copper and the latent heat of fusion of water are key factors in determining this maximum heat transfer and the amount of ice melted.\n\nGoverning formula:\n\\[ Q_{\\text{copper}} = m_{\\text{ice}} \\cdot L_f \\]\nwhere \\( Q_{\\text{copper}} \\) is the heat transferred from the copper plate, \\( m_{\\text{ice}} \\) is the mass of ice melted, and \\( L_f \\) is the latent heat of fusion of water.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the maximum heat transfer and the amount of ice melted. The answer should ensure all steps are visible and logically connected. The answer would include the specific heat capacity of copper and the latent heat of fusion of water, and the calculation of the heat transferred from the copper plate to the ice block. The answer would also include the calculation of the mass of ice melted, ensuring all steps are clear and the relationship between the heat transferred and the mass of ice melted is explained. The answer would also discuss the importance of these values in understanding heat transfer and phase changes, and their application in real-world scenarios."
+  },
+  {
+   "id": "phys-PUC1-0013",
+   "answerable": true,
+   "declined": false,
+   "secs": 13.9,
+   "chars": 1361,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "How does moment I and ω change during arm extension?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "A one-sentence direct answer:\nThe moment of inertia (I) decreases and the angular speed (ω) increases when the girl stretches her arms horizontally while the chair is rotating.\n\nExplanation in the terminology of the prescribed textbook:\nThe girl's arms, which are part of the system, are moving closer to the axis of rotation. As a result, the distribution of mass about the axis of rotation changes, leading to a decrease in the moment of inertia (I). According to the conservation of angular momentum, Iω = constant, the angular speed (ω) increases to compensate for the decrease in I.\n\nGoverning formula:\nNo governing formula is provided in the context for this specific phenomenon.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the decrease in moment of inertia and the increase in angular speed due to the conservation of angular momentum. The answer should ensure all steps are visible and logically connected. The answer would include the conservation of angular momentum equation Iω = constant and explain how the decrease in moment of inertia leads to an increase in angular speed to maintain the same angular momentum. The answer would also discuss the importance of these concepts in understanding rotational dynamics and the role of moment of inertia in determining the rotational behavior of objects."
+  },
+  {
+   "id": "phys-PUC1-0014",
+   "answerable": true,
+   "declined": false,
+   "secs": 16.5,
+   "chars": 1774,
+   "citations": 0,
+   "sources": 2,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nA body would weigh 125 N at a depth equal to half the radius of the earth, and its weight at the centre of the earth would be zero.\n\nExplanation in the terminology of the prescribed textbook:\nThe body's weight is determined by the gravitational force acting on it. Assuming the Earth is a sphere of uniform mass density, the gravitational force at a depth equal to half the Earth's radius is reduced due to the decreased distance from the center of the Earth. At the centre of the Earth, the distance from the center to the body is equal to the radius, resulting in no gravitational force, hence the weight is zero.\n\nGoverning formula:\n\\[ F = \\frac{G M m}{r^2} \\]\nwhere \\( F \\) is the gravitational force (weight), \\( G \\) is the gravitational constant, \\( M \\) is the mass of the Earth, \\( m \\) is the mass of the body, and \\( r \\) is the distance from the center of the Earth to the body.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the weight reduction at half the radius and the weight being zero at the centre of the Earth. The answer should ensure all steps are visible and logically connected. The answer would include the gravitational force formula and the calculation of the force at half the radius of the Earth, showing the weight is reduced to half of what it is on the surface. The answer would also include the calculation of the weight at the centre of the Earth, explaining the distance from the center to the body is equal to the radius, resulting in no gravitational force. The answer would also discuss the importance of these concepts in understanding gravitational force and its behavior within a spherical mass distribution, and their application in real-world scenarios."
+  },
+  {
+   "id": "phys-PUC1-0015",
+   "answerable": true,
+   "declined": false,
+   "secs": 11.1,
+   "chars": 1004,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "ambiguous",
+    "rewritten_query": "How does temperature affect liquid viscosity?",
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 0.5
+   },
+   "answer": "A one-sentence direct answer:\nThe viscosity of liquids generally decreases with temperature.\n\nExplanation in the terminology of the prescribed textbook:\nThe viscosity of liquids decreases with an increase in temperature. This is due to the increased molecular motion, which reduces the intermolecular forces and thus the resistance to flow.\n\nGoverning formula:\nNo governing formula is provided in the context for this specific phenomenon.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the decrease in viscosity with temperature. The answer should ensure all steps are visible and logically connected. The answer would include the relationship between temperature and viscosity, explaining how increased temperature leads to more molecular motion and reduced intermolecular forces, resulting in decreased viscosity. The answer would also discuss the importance of these concepts in understanding fluid dynamics and their application in real-world scenarios."
+  },
+  {
+   "id": "phys-PUC1-0016",
+   "answerable": true,
+   "declined": false,
+   "secs": 11.9,
+   "chars": 1244,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nThe function ωt−e is not periodic among the given options.\n\nExplanation in the terminology of the prescribed textbook:\nThe function ωt−e is not periodic because e−ωt is not a periodic function; it decreases monotonically with time and tends to zero as time increases, never repeating its value. In contrast, sin(ωt) and cos(ωt) are periodic functions with periods that are multiples of ωt.\n\nGoverning formula:\nNo governing formula is provided in the context for this specific phenomenon.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the non-periodicity of the function ωt−e due to the exponential term e−ωt, which decreases monotonically and never repeats its value. The answer would also discuss the periodic nature of sin(ωt) and cos(ωt) and how their periods are multiples of ωt. The answer would ensure all steps are visible and logically connected, including the explanation of the exponential function's behavior and its impact on the overall function's periodicity. The answer would also discuss the importance of these concepts in understanding the behavior of oscillatory and exponential functions in physics and their applications in real-world scenarios."
+  },
+  {
+   "id": "phys-PUC1-0017",
+   "answerable": true,
+   "declined": false,
+   "secs": 14.1,
+   "chars": 1338,
+   "citations": 0,
+   "sources": 2,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nThe trajectory of a projectile is a parabola based on the equations provided.\n\nExplanation in the terminology of the prescribed textbook:\nThe trajectory of a projectile is a parabola because the equations for the x and y components of its position as a function of time are quadratic in nature. The x-component is linear (vo cos θo t), while the y-component is quadratic (vo sin θo t - 1/2 g t^2). These quadratic terms describe a parabolic path.\n\nGoverning formula:\n\\[ y = (v_0 \\sin \\theta_0)t - \\frac{1}{2}gt^2 \\]\nwhere:\n- \\( y \\) is the vertical position of the projectile,\n- \\( v_0 \\) is the initial velocity,\n- \\( \\theta_0 \\) is the initial angle of projection,\n- \\( t \\) is the time,\n- \\( g \\) is the acceleration due to gravity.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the trajectory being a parabola due to the quadratic nature of the y-component equation. The answer should ensure all steps are visible and logically connected. The answer would include the trajectory equation and explain how the quadratic term in the y-component equation results in a parabolic path. The answer would also discuss the importance of these equations in understanding projectile motion and their application in real-world scenarios, such as ballistics and sports."
+  },
+  {
+   "id": "phys-PUC1-0018",
+   "answerable": true,
+   "declined": false,
+   "secs": 14.4,
+   "chars": 1594,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nAccording to the kinetic theory of gases, collisions between the molecules of a gas are elastic.\n\nExplanation in the terminology of the prescribed textbook:\nThe collisions between the molecules of a gas are elastic, implying that the total kinetic energy is conserved during these collisions. This means that the molecules bounce off each other without any loss of energy, and the total momentum is also conserved as usual.\n\nGoverning formula:\n\\[ p = n m v_x^2 \\]\nwhere:\n- \\( p \\) is the pressure of the gas,\n- \\( n \\) is the number of molecules per unit volume,\n- \\( m \\) is the mass of a single molecule,\n- \\( v_x \\) is the x-component of the velocity of the molecules.\n\nA 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the collisions being elastic, which means the total kinetic energy is conserved and the molecules bounce off each other without any loss of energy. The answer would also include the governing formula for the pressure of a gas derived from the kinetic theory, explaining how the pressure is related to the number of molecules, the mass of a single molecule, and the x-component of the velocity. The answer would ensure all steps are visible and logically connected, including the conservation of energy and momentum principles applied to the collisions. The answer would also discuss the importance of these concepts in understanding the behavior of gases and their applications in real-world scenarios, such as the design of air conditioning systems and the behavior of gases in chemical reactions."
+  },
+  {
+   "id": "phys-PUC1-0019",
+   "answerable": true,
+   "declined": false,
+   "secs": 24.6,
+   "chars": 2304,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 2,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer:\nThe expressions for the final velocities of the two particles undergoing a completely elastic collision in one-dimension, with the second body initially at rest, are \\( v_1' = \\frac{m_1 - m_2}{m_1 + m_2} v_1 \\) and \\( v_2' = \\frac{2m_1}{m_1 + m_2} v_1 \\).\n\n2. The explanation, in the terminology of the prescribed textbook:\nIn a completely elastic collision in one dimension, where the second body is initially at rest, the velocities of the particles after the collision are determined by the conservation of momentum and the conservation of kinetic energy. The velocities are calculated such that the total momentum and kinetic energy are conserved before and after the collision. The expressions derived from these principles show that the velocities of the particles are interchanged in magnitude and direction, with the velocities being proportional to the masses of the particles.\n\n3. Governing formula:\n\\[ v_1' = \\frac{m_1 - m_2}{m_1 + m_2} v_1 \\]\n\\[ v_2' = \\frac{2m_1}{m_1 + m_2} v_1 \\]\n\nWhere:\n- \\( v_1 \\) is the initial velocity of the first particle (moving),\n- \\( v_1' \\) is the final velocity of the first particle,\n- \\( v_2' \\) is the final velocity of the second particle (initially at rest),\n- \\( m_1 \\) is the mass of the first particle,\n- \\( m_2 \\) is the mass of the second particle.\n\n4. A 5-mark answer would earn:\nA complete but not padded answer, including the explanation of the expressions for the final velocities of the particles in a completely elastic collision in one dimension. The answer should ensure all steps are visible and logically connected. The answer would include the expressions for the final velocities and explain how they are derived from the conservation of momentum and kinetic energy principles. The answer would also discuss the physical meaning of these expressions, such as how the velocities are related to the masses and initial velocity of the first particle. The answer would also include the application of these expressions to a specific scenario, such as the given problem of two particles undergoing a completely elastic collision. The answer would ensure that all steps are clear and logically connected, and would discuss the importance of these equations in understanding the behavior of elastic collisions."
+  },
+  {
+   "id": "phys-PUC2-0020",
+   "answerable": true,
+   "declined": true,
+   "secs": 3.0,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "What are the criteria for marking numerical problems?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-0021",
+   "answerable": true,
+   "declined": false,
+   "secs": 23.2,
+   "chars": 2016,
+   "citations": 1,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer:\nTo prove Snell's law, consider the relationship between the angles of incidence and refraction, and the speed of light in both media.\n\nExplanation:\nTo derive Snell's law, we consider the relationship between the angles of incidence (i) and refraction (r) and the speed of light in two different media. The law states that the ratio of the sine of the angle of incidence to the sine of the angle of refraction is constant, i.e., sin i / sin r = n21, where n21 is the ratio of the speed of light in the second medium to the speed of light in the first medium.\n\nGoverning formula:\nsin i / sin r = n21\n\n[1] 132ndPhysicsPart-2.pdf, page 68: Malus' law is derived from the polarization of light by a polaroid. The intensity of the transmitted light is given by i = i0 cos²q, where i0 is the intensity of the polarized light after passing through the polaroid, and q is the angle between the pass-axis of the polaroid and the direction of polarization of the incident light.\n\nA worked example or application:\nConsider a light wavefront passing from a rarer medium (with a lower refractive index, n1) to a denser medium (with a higher refractive index, n2). The speed of light in the denser medium is slower than in the rarer medium. If the angle of incidence is 30°, and the refractive index ratio (n21) is 1.5, we can calculate the angle of refraction using Snell's law:\n\nsin i / sin r = n21\nsin 30° / sin r = 1.5\nsin r = sin 30° / 1.5\nsin r = 0.5 / 1.5\nsin r = 0.333\nr = sin⁻¹(0.333) ≈ 19.47°\n\nThus, the angle of refraction is approximately 19.47°, demonstrating how the light bends towards the normal as it moves from a rarer to a denser medium.\n\nA 5-mark answer would earn:\n- Complete coverage of the derivation of Snell's law for the case of light passing from a rarer to a denser medium.\n- A clear explanation of the concept of refraction and the role of the refractive index.\n- The governing formula with correct units.\n- A worked example to illustrate the application of Snell's law."
+  },
+  {
+   "id": "phys-PUC2-0022",
+   "answerable": true,
+   "declined": false,
+   "secs": 22.8,
+   "chars": 1564,
+   "citations": 0,
+   "sources": 3,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 2,
+    "action": "ambiguous",
+    "rewritten_query": "PUC2 physics E part for visually impaired",
+    "dropped": 1,
+    "boilerplate_removed": 2,
+    "best_grade": 0.5
+   },
+   "answer": "1. A one-sentence direct answer.\nTo derive the Schwarzschild metric, we start with the Einstein field equations and apply them to a spherically symmetric, static spacetime.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nThe Schwarzschild metric describes the spacetime outside a spherically symmetric, non-rotating mass. It is derived by solving the Einstein field equations for a static, spherically symmetric metric. The metric is expressed in terms of the Schwarzschild radius, which is related to the mass of the central object.\n\n3. Any governing formula, with every symbol defined and SI units given.\nThe Schwarzschild metric is given by:\n\\[ ds^2 = -\\left(1 - \\frac{2GM}{r}\\right)dt^2 + \\left(1 - \\frac{2GM}{r}\\right)^{-1}dr^2 + r^2(d\\theta^2 + \\sin^2\\theta d\\phi^2) \\]\nwhere \\( ds^2 \\) is the spacetime interval, \\( G \\) is the gravitational constant, \\( M \\) is the mass of the central object, \\( r \\) is the radial distance, and \\( t \\) is time. The metric is valid outside the event horizon, where \\( r > 2GM \\).\n\n4. A worked example or application only if the context contains one.\nA worked example would involve calculating the time dilation and gravitational redshift near a massive object, such as a black hole. For instance, if we have a central mass \\( M = 1.5 \\times 10^{30} \\) kg, the Schwarzschild radius \\( R_s = \\frac{2GM}{c^2} \\approx 4.5 \\times 10^9 \\) m. At a distance \\( r = 10^6 \\) m from the central mass, the time dilation factor \\( \\gamma = \\sqrt{1 - \\frac{2GM}{r c^2}} \\approx 1.0000000000000000000000000000000"
+  },
+  {
+   "id": "phys-PUC2-0023",
+   "answerable": true,
+   "declined": false,
+   "secs": 10.4,
+   "chars": 1103,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nMagnetic susceptibility (χ) and magnetic relative permeability (µr) are related quantities that describe how a material responds to an external magnetic field.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nMagnetic susceptibility (χ) is a dimensionless quantity that describes the ratio of the magnetization of a material to the magnetic field strength. Magnetic relative permeability (µr) is a dimensionless quantity that represents the ratio of the permeability of a material to the permeability of free space (µ0). They are interrelated and only one of them is independent; given one, the other two may be easily determined.\n\n3. Any governing formula, with every symbol defined and SI units given.\nThe relationship between magnetic susceptibility (χ) and magnetic relative permeability (µr) is given by the equation:\n\\[ \\mu_r = 1 + \\chi \\]\nwhere χ is the magnetic susceptibility and has units of dimensionless quantity.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0024",
+   "answerable": true,
+   "declined": true,
+   "secs": 4.3,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Which physicist proposed equations for EM waves?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-0025",
+   "answerable": true,
+   "declined": false,
+   "secs": 15.7,
+   "chars": 1228,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Band theory solid classification intrinsic vs extrinsic semiconductors",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "1. A one-sentence direct answer.\nBand theory helps classify solids into conductors, insulators, and semiconductors based on the energy levels of electrons within their atomic structures.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nBand theory categorizes solids into three main categories: conductors, insulators, and semiconductors. Conductors have a partially filled valence band, while insulators have a completely filled valence band. Semiconductors have a partially filled valence band and a partially filled conduction band, with a small energy gap between them. The energy levels within these bands are quantized, and electrons can move from the valence band to the conduction band under the influence of an external electric field.\n\n3. Any governing formula, with every symbol defined and SI units given.\nThe energy gap (ΔE) in semiconductors is given by:\n\\[ \\Delta E = E_c - E_v \\]\nwhere \\( E_c \\) is the energy of the top of the valence band and \\( E_v \\) is the energy of the bottom of the conduction band. The energy gap is typically measured in electron volts (eV).\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0026",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.6,
+   "chars": 1251,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nTo classify solids using band theory, we categorize them into conductors, insulators, and semiconductors based on the energy levels of electrons within their atomic structures.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nBand theory categorizes solids into three main categories: conductors, insulators, and semiconductors. Conductors have a partially filled valence band, while insulators have a completely filled valence band. Semiconductors have a partially filled valence band and a partially filled conduction band, with a small energy gap between them. The energy levels within these bands are quantized, and electrons can move from the valence band to the conduction band under the influence of an external electric field.\n\n3. Any governing formula, with every symbol defined and SI units given.\nThe energy gap (ΔE) in semiconductors is given by:\n\\[ \\Delta E = E_c - E_v \\]\nwhere \\( E_c \\) is the energy of the top of the valence band and \\( E_v \\) is the energy of the bottom of the conduction band. The energy gap is typically measured in electron volts (eV).\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0027",
+   "answerable": true,
+   "declined": false,
+   "secs": 9.7,
+   "chars": 753,
+   "citations": 0,
+   "sources": 2,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nThermionic emission is the process by which electrons are emitted from a metal surface due to the heating of the surface.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nThermionic emission refers to the emission of electrons from a metal surface when the surface is heated to a sufficient temperature. This is in contrast to photoelectric emission, which involves the emission of electrons due to the absorption of light.\n\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for thermionic emission in the given context.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0028",
+   "answerable": true,
+   "declined": false,
+   "secs": 9.0,
+   "chars": 709,
+   "citations": 0,
+   "sources": 2,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nIn a pure resistive circuit, the phase difference between the peak value of voltage and current is zero.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nIn a purely resistive circuit, the current through the resistor is in phase with the ac voltage. This means that the voltage and current phasors for the resistor are in the same direction, resulting in a phase angle of zero.\n\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for the phase difference in the given context.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0029",
+   "answerable": true,
+   "declined": false,
+   "secs": 11.5,
+   "chars": 779,
+   "citations": 0,
+   "sources": 2,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "ambiguous",
+    "rewritten_query": "What type of substances move in magnetic fields?",
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 0.5
+   },
+   "answer": "1. A one-sentence direct answer.\nParamagnetic substances have the tendency to move from a region of weaker magnetic field to a stronger magnetic field.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nParamagnetic substances are characterized by their weak magnetization when placed in an external magnetic field. They possess a tendency to move from regions of weaker magnetic field to regions of stronger magnetic field, thus getting weakly attracted to a magnet.\n\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for the behavior of magnetic field lines in the given context.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0030",
+   "answerable": true,
+   "declined": false,
+   "secs": 26.4,
+   "chars": 1812,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect_recovered",
+    "rewritten_query": "Convex lens image formation: position, magnification, height change 21cm 14cm 3cm",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "1. A one-sentence direct answer.\nTo find the position and magnification of the image formed by a convex lens, we can use the lens formula and magnification formula.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nThe lens formula is given by \\(\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}\\), where \\(f\\) is the focal length, \\(v\\) is the image distance, and \\(u\\) is the object distance. The magnification \\(m\\) is given by \\(m = \\frac{v}{u}\\).\n\n3. Any governing formula, with every symbol defined and SI units given.\nThe lens formula is:\n\\[\n\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}\n\\]\nwhere \\(f = 14 \\, \\text{cm}\\), \\(u = -21 \\, \\text{cm}\\) (since the object is in front of the lens), and \\(v\\) is the image distance to be found. The magnification formula is:\n\\[\nm = \\frac{v}{u}\n\\]\n\n4. A worked example or application only if the context contains one.\nGiven the object distance \\(u = -21 \\, \\text{cm}\\) and the focal length \\(f = 14 \\, \\text{cm}\\), we can substitute these values into the lens formula to find the image distance \\(v\\):\n\\[\n\\frac{1}{14} = \\frac{1}{v} - \\frac{1}{21}\n\\]\n\\[\n\\frac{1}{v} = \\frac{1}{14} + \\frac{1}{21} = \\frac{3 + 2}{42} = \\frac{5}{42}\n\\]\n\\[\nv = \\frac{42}{5} = 8.4 \\, \\text{cm}\n\\]\nThe magnification \\(m\\) is:\n\\[\nm = \\frac{v}{u} = \\frac{8.4}{-21} = -0.4\n\\]\nThe height of the image \\(h_i\\) can be calculated using \\(m = \\frac{h_i}{h_o}\\), where \\(h_o = 3 \\, \\text{cm}\\):\n\\[\nm = \\frac{h_i}{3} = -0.4 \\implies h_i = -1.2 \\, \\text{cm}\n\\]\nThe negative sign indicates that the image is inverted. If the object is moved further away from the lens, the image distance \\(v\\) will change, and the magnification \\(m\\) will also change. The height of the image will depend on the new image distance and the object distance, but the sign of the magnification will remain the same."
+  },
+  {
+   "id": "phys-PUC2-0031",
+   "answerable": true,
+   "declined": false,
+   "secs": 13.8,
+   "chars": 1095,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nThe average power in an AC LCR circuit is given by \\( \\text{cos} \\phi \\times \\frac{V_m I_m}{2} \\), where \\( \\phi \\) is the phase angle between the voltage and current.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nThe average power in an AC LCR circuit is given by \\( \\text{cos} \\phi \\times \\frac{V_m I_m}{2} \\), where \\( \\phi \\) is the phase angle between the voltage and current. This phase angle is derived from the phase difference between the voltage and current in the circuit, which is influenced by the resistive, inductive, and capacitive components.\n\n3. Any governing formula, with every symbol defined and SI units given.\nThe average power \\( P_{\\text{avg}} \\) in an AC LCR circuit is given by:\n\\[\nP_{\\text{avg}} = \\text{cos} \\phi \\times \\frac{V_m I_m}{2}\n\\]\nwhere:\n- \\( V_m \\) is the peak voltage in volts (V),\n- \\( I_m \\) is the peak current in amperes (A),\n- \\( \\phi \\) is the phase angle in radians.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0032",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.4,
+   "chars": 981,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nKirchhoff's laws are fundamental principles in electrical circuit analysis, which include Kirchhoff's Current Law (KCL) and Kirchhoff's Voltage Law (KVL).\n\n2. The explanation, in the terminology the prescribed textbook uses.\nKirchhoff's Current Law (KCL) states that the sum of currents entering a junction must equal the sum of currents leaving the junction. Kirchhoff's Voltage Law (KVL) states that the algebraic sum of all voltages around any closed loop in a circuit must be zero.\n\n3. Any governing formula, with every symbol defined and SI units given.\nKirchhoff's Current Law (KCL):\n\\\\[\n\\\\sum_{i} I_i = 0\n\\\\]\nwhere \\\\(I_i\\\\) represents the current flowing into or out of a junction.\n\nKirchhoff's Voltage Law (KVL):\n\\\\[\n\\\\sum_{i} V_i = 0\n\\\\]\nwhere \\\\(V_i\\\\) represents the voltage across each segment of a closed loop.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0033",
+   "answerable": true,
+   "declined": false,
+   "secs": 8.7,
+   "chars": 659,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nElectric field lines represent the direction and strength of the electric field at various points in space.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nElectric field lines depict the direction of the electric field at any point and the density of these lines indicates the strength of the electric field.\n\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for the properties of electric field lines in the given context.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0034",
+   "answerable": true,
+   "declined": false,
+   "secs": 16.8,
+   "chars": 1709,
+   "citations": 0,
+   "sources": 4,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 1,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nA p-n junction diode rectifies alternating current (AC) into direct current (DC).\n\n2. The explanation, in the terminology the prescribed textbook uses.\nA p-n junction diode converts alternating current (AC) into direct current (DC) by allowing current to flow in one direction only, blocking the flow in the opposite direction.\n\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for the behavior of a p-n junction diode in rectifying AC into DC in the given context.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context.\n\nFor part (a) of the question:\nA diagram of the unbiased depletion region of a p-n junction would show a region of positive space charge on the n-side and negative space charge on the p-side. These space charges are immobile and prevent the flow of current across the junction. The depletion region is a region of reduced charge density, where the depletion of free charges (electrons and holes) leaves behind immobile ions. This region is crucial for the operation of the p-n junction diode, as it forms a barrier that allows current to flow only in one direction.\n\nFor part (b) of the question:\nRectification is the process of converting alternating current (AC) into direct current (DC). In the context of a p-n junction diode, rectification occurs when the p-n junction is forward biased, allowing current to flow in one direction only. This process is fundamental in the functioning of diodes in electronic circuits, particularly in the conversion of AC to DC, which is essential for the operation of many electronic devices."
+  },
+  {
+   "id": "phys-PUC2-0035",
+   "answerable": true,
+   "declined": false,
+   "secs": 14.7,
+   "chars": 1268,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nThe magnetic field due to a straight infinite conductor carrying current can be derived using Ampere's circuital law.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nAmpere's circuital law states that the line integral of the magnetic field around a closed loop is equal to the permeability of free space times the enclosed current. For a straight infinite conductor, the magnetic field is tangential to the circle of radius r centered on the conductor, and its magnitude can be derived using this law.\n\n3. Any governing formula, with every symbol defined and SI units given.\nAmpere's circuital law is expressed as:\n\\\\[\n\\oint \\mathbf{B} \\cdot d\\mathbf{l} = \\mu_0 I_{\\text{enc}}\n\\\\]\nwhere \\\\(\\mathbf{B}\\\\) is the magnetic field, \\\\(d\\mathbf{l}\\\\) is an infinitesimal length element along the path, and \\\\(I_{\\text{enc}}\\\\) is the enclosed current.\n\nFor a straight infinite wire, the magnetic field \\\\(B\\\\) at a distance \\\\(r\\\\) from the wire is:\n\\\\[\nB \\times 2\\pi r = \\mu_0 I\n\\\\]\nwhere \\\\(I\\\\) is the current flowing through the wire. Solving for \\\\(B\\\\):\n\\\\[\nB = \\frac{\\mu_0 I}{2\\pi r}\n\\\\]\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0036",
+   "answerable": true,
+   "declined": false,
+   "secs": 10.1,
+   "chars": 1076,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nNuclear fusion is the process where lighter atomic nuclei combine to form heavier nuclei, releasing energy.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nNuclear fusion is the process where lighter atomic nuclei combine to form heavier nuclei, releasing energy. This process is central to the energy production in stars, as it occurs within the core of stars under extremely high temperatures and pressures.\n\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for nuclear fusion in the given context.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context.\n\nThe provided context does not contain a derivation or a worked example related to nuclear fusion, nor does it provide any formula or specific details about the energy released in the fusion reactions mentioned. Therefore, the depth of a 5-mark answer would be limited to the definition and explanation of nuclear fusion, as outlined above."
+  },
+  {
+   "id": "phys-PUC2-0037",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.2,
+   "chars": 736,
+   "citations": 0,
+   "sources": 4,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 3,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "1. A one-sentence direct answer.\nNeither Statement I nor Statement II are correct based on the provided context.\n\n2. The explanation, in the terminology the prescribed textbook uses.\nStatement I refers to the shape of wave fronts from a point source in an isotropic medium, which are not always spherical at finite distances. Statement II discusses the speed of light in an isotropic medium, which is constant.\n\n3. Any governing formula, with every symbol defined and SI units given.\nNo governing formula is provided for the shape of wave fronts or the speed of light in an isotropic medium in the given context.\n\n4. A worked example or application only if the context contains one.\nNo worked example is provided in the given context."
+  },
+  {
+   "id": "phys-PUC2-0038",
+   "answerable": true,
+   "declined": false,
+   "secs": 12.8,
+   "chars": 1108,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 4,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "A one-sentence direct answer.\nThe electrostatic potential at a point is equal to work done to transfer unit positive test charge from infinity to that point in the electric field.\n\nThe explanation, in the terminology the prescribed textbook uses.\nThe electrostatic potential at a point is equal to the work done by an external force to transfer a unit positive test charge from infinity to that point, against the electric field.\n\nThe governing formula, with every symbol defined and SI units given.\nThe electrostatic potential \\( V \\) at a point is defined as:\n\\[ V = \\frac{W}{q} \\]\nwhere \\( W \\) is the work done to transfer a unit positive test charge \\( q \\) from infinity to that point.\n\nA worked example or application only if the context contains one.\nExample:\nGiven a point in an electric field with a potential of \\( V = 5 \\times 10^4 \\, \\text{V} \\), calculate the work done to transfer a unit positive test charge from infinity to that point.\n\\[ W = qV = 1 \\, \\text{C} \\times 5 \\times 10^4 \\, \\text{V} = 5 \\times 10^4 \\, \\text{J} \\]\n\nThe depth a 5-mark answer would earn: complete but not padded."
+  },
+  {
+   "id": "phys-PUC2-0039",
+   "answerable": true,
+   "declined": true,
+   "secs": 3.9,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Charge per length in uniform charge distribution",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-oos-0150",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.3,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "What is Higgs mechanism? How does it explain electroweak symmetry breaking?",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-oos-0151",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.2,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "What is derivation of Schwarzschild metric from Einstein eqs?",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC1-oos-0152",
+   "answerable": false,
+   "declined": true,
+   "secs": 3.7,
+   "chars": 165,
+   "citations": 0,
+   "sources": 1,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 1,
+    "action": "correct",
+    "rewritten_query": null,
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 1.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-oos-0153",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.3,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "What is Higgs mechanism? How does it break electroweak symmetry?",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-oos-0154",
+   "answerable": false,
+   "declined": true,
+   "secs": 1.1,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 0,
+    "action": "incorrect",
+    "rewritten_query": "Schwarzschild metric Einstein field equations derivation",
+    "dropped": 0,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "phys-PUC2-oos-0155",
+   "answerable": false,
+   "declined": true,
+   "secs": 2.2,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "What is renormalization in QED?",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "chem-PUC1-oos-0156",
+   "answerable": false,
+   "declined": true,
+   "secs": 3.6,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Suzuki-Miyaura cross-coupling reaction mechanism",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  },
+  {
+   "id": "chem-PUC1-oos-0157",
+   "answerable": false,
+   "declined": true,
+   "secs": 3.5,
+   "chars": 163,
+   "citations": 0,
+   "sources": 0,
+   "retrieval": {
+    "enabled": true,
+    "retrieved": 5,
+    "action": "incorrect",
+    "rewritten_query": "Molecular dynamics protein tertiary structure prediction",
+    "dropped": 5,
+    "boilerplate_removed": 0,
+    "best_grade": 0.0
+   },
+   "answer": "I could not find supporting passages for this request in the selected course material. Check your subject and year, or ask for the relevant material to be indexed."
+  }
+ ]
+}
