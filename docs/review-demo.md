@@ -4,6 +4,10 @@ Everything here was run against the live system. Where a figure is named, the
 actual PNG was opened and looked at, not just its caption and score — the
 caption being right is no guarantee the image under it is.
 
+This is the screen-by-screen demo script. For what the project is, the points
+worth leading with and how the hard problems were solved, see
+[review-brief.md](review-brief.md).
+
 ## State of the system: 11 of 11 surfaces pass
 
 | Surface | | Evidence |
