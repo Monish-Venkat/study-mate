@@ -9,14 +9,22 @@ guessed at by an LLM judge, since the judge and the generator share blind spots.
 """
 import argparse
 import json
+import os
 import re
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 
-BASE = 'http://127.0.0.1:8000'
-DECLINE = re.compile(r'could not find supporting passages|not covered in your course', re.I)
+# Overridable so a run can target a second backend when another session
+# already holds port 8000: STUDYMATE_BASE=http://127.0.0.1:8001
+BASE = os.environ.get('STUDYMATE_BASE', 'http://127.0.0.1:8000').rstrip('/')
+# Every way the app can decline. The third is the grounding abstention added
+# in rag.py: without it here, a run reports abstention_recall 0.0 however
+# well the gate behaves, because the refusal text simply is not matched.
+DECLINE = re.compile(
+    r'could not find supporting passages|not covered in your course'
+    r'|has not answered this', re.I)
 CITATION = re.compile(r'\[\d+(?:,\s*\d+)*\]')
 
 

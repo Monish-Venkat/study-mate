@@ -59,26 +59,47 @@ def bearer_token(provider):
     return settings.LLM_API_KEY
 
 
-async def _chat_completions(client, url, model, messages, token_budget):
-    response = await client.post(url, json={
+async def _chat_completions(client, url, model, messages, token_budget, json_mode=False):
+    payload = {
         'model': model, 'messages': messages, 'stream': False,
-        'temperature': 0.3, 'max_tokens': token_budget})
+        'temperature': 0.3, 'max_tokens': token_budget}
+    if json_mode:
+        payload['response_format'] = {'type': 'json_object'}
+    response = await client.post(url, json=payload)
     response.raise_for_status()
     return response.json()['choices'][0]['message']['content']
 
 
-async def _ollama_chat(client, model, messages, token_budget):
+async def _ollama_chat(client, model, messages, token_budget, json_mode=False):
     base = settings.VLLM_BASE_URL.rstrip('/')
-    response = await client.post(f'{base}/api/chat', json={
+    payload = {
         'model': model, 'messages': messages, 'stream': False,
-        'options': {'temperature': 0.3, 'num_predict': token_budget, 'num_ctx': 16384}})
+        'options': {
+            'temperature': 0.3, 'num_predict': token_budget, 'num_ctx': 16384,
+            # Ollama looks back only 64 tokens by default, which is about two
+            # bullet points -- short enough that a model restating a six-point
+            # list on a loop never sees its own repetition. The window is
+            # widened to cover a whole answer's worth of points. This reduces
+            # looping but cannot prevent it, because the penalty acts on tokens
+            # and a reworded restatement shares few of them; drop_repeats() in
+            # answer_text.py is what actually guarantees the output.
+            'repeat_penalty': 1.15, 'repeat_last_n': 512,
+        }}
+    if json_mode:
+        # Constrained decoding, not an instruction. Asking qwen2.5 in the prompt
+        # for plain-text maths does not stop it writing \frac inside a JSON
+        # string, which is not a legal escape and loses the whole paper. The
+        # grammar makes the escaping correct at the sampler.
+        payload['format'] = 'json'
+    response = await client.post(f'{base}/api/chat', json=payload)
     if response.status_code in (404, 405):
-        return await _chat_completions(client, f'{base}/v1/chat/completions', model, messages, token_budget)
+        return await _chat_completions(client, f'{base}/v1/chat/completions', model, messages, token_budget, json_mode)
     response.raise_for_status()
     return response.json()['message']['content']
 
 
-async def generate_text(model_name: str, prompt: str, token_budget: int = 1600, system: str | None = None):
+async def generate_text(model_name: str, prompt: str, token_budget: int = 1600, system: str | None = None,
+                        json_mode: bool = False):
     messages = [
         {'role': 'system', 'content': system or TUTOR_SYSTEM_PROMPT},
         {'role': 'user', 'content': prompt},
@@ -91,12 +112,12 @@ async def generate_text(model_name: str, prompt: str, token_budget: int = 1600, 
             if provider == 'vertex':
                 if not settings.LLM_CHAT_URL:
                     raise ValueError('LLM_CHAT_URL is required for the vertex provider')
-                content = await _chat_completions(client, settings.LLM_CHAT_URL, model, messages, token_budget)
+                content = await _chat_completions(client, settings.LLM_CHAT_URL, model, messages, token_budget, json_mode)
             elif provider == 'openrouter':
-                content = await _chat_completions(client, OPENROUTER_URL, model, messages, token_budget)
+                content = await _chat_completions(client, OPENROUTER_URL, model, messages, token_budget, json_mode)
             else:
                 # Ollama, or any OpenAI-compatible server behind VLLM_BASE_URL.
-                content = await _ollama_chat(client, model, messages, token_budget)
+                content = await _ollama_chat(client, model, messages, token_budget, json_mode)
             if not content or not content.strip():
                 raise ValueError('Empty model response')
             return content.strip()

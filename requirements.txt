@@ -18,3 +18,4 @@ openai-whisper
 gTTS>=2.5
 imageio-ffmpeg
 fonttools
+pypdfium2

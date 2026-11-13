@@ -22,8 +22,43 @@ def blueprint(total):
     return [{'id':i+1,**slot} for i,slot in enumerate(slots)]
 
 
+JSON_ESCAPES='"\\/bfnrtu'
+# Control characters that no answer should contain. \n and \t are legitimate.
+MANGLED=re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f]')
+
+def _escape_latex(text):
+    """Double the backslashes JSON cannot read.
+
+    Physics answers carry LaTeX, and a model writing \\( or \\Omega inside a
+    JSON string produces a document json.loads rejects outright: a backslash is
+    only legal before one of \" \\ / b f n r t u. A whole good paper was being
+    discarded over one such character, so a failed parse is retried with the
+    stray backslashes doubled. The pattern consumes both characters of every
+    escape, which leaves an already-correct \\\\ pair alone instead of mangling
+    its second half.
+
+    This cannot rescue every case: \\frac is indistinguishable from an escaped
+    formfeed followed by "rac", and JSON says the latter. Those decode to
+    control characters rather than failing, which is why the caller checks for
+    them and retries instead of shipping corrupted text.
+    """
+    return re.sub(r'\\(.)',lambda m:m.group(0) if m.group(1) in JSON_ESCAPES else '\\\\'+m.group(1),text,flags=re.S)
+
+
+def _mangled(value):
+    if isinstance(value,str):return bool(MANGLED.search(value))
+    if isinstance(value,dict):return any(_mangled(v) for v in value.values())
+    if isinstance(value,list):return any(_mangled(v) for v in value)
+    return False
+
+
 def validate_paper(raw,slots):
-    data=json.loads(re.sub(r'^```(?:json)?\s*|\s*```$','',raw.strip()))
+    body=re.sub(r'^```(?:json)?\s*|\s*```$','',raw.strip())
+    try:
+        data=json.loads(body)
+    except json.JSONDecodeError:
+        data=json.loads(_escape_latex(body))
+        if _mangled(data):raise ValueError('Escape sequences decoded to control characters')
     questions=data.get('questions')
     if not isinstance(questions,list) or len(questions)!=len(slots):raise ValueError('Wrong question count')
     seen=set()
@@ -37,7 +72,12 @@ def validate_paper(raw,slots):
         alternative=q.get('alternative')
         if slot['internal_choice']:
             if not isinstance(alternative,dict) or not all(isinstance(alternative.get(k),str) and 1<=len(alternative[k].strip())<=5000 for k in ('text','answer')):raise ValueError('Missing internal choice')
-        elif alternative:raise ValueError('Unexpected alternative')
+        # A choice the blueprint did not ask for is surplus, not corruption:
+        # dropping it leaves a paper that matches the blueprint exactly, where
+        # rejecting it threw away seven good questions over an eighth's extra
+        # field. A missing choice above is still fatal, because the blueprint
+        # promises the student one.
+        elif alternative:q.pop('alternative',None)
     return questions
 
 # Extraction artefacts and generic words that match title pages and prefaces
@@ -52,7 +92,7 @@ def exam_topics(subject,level,board):
     # full paper, so top it up with the recurring exam topics.
     if len(topics)<8:
         from app.services.pyq_analysis import question_records,trend_report
-        records,_=question_records(subject,level,board)
+        records,_,_=question_records(subject,level,board)
         known={t.lower() for t in topics}
         for entry in trend_report(records)['topics']:
             topic=entry['topic']
@@ -72,12 +112,23 @@ async def generate_mock(req):
     hits=[h for h in hits if h['score']>=settings.MIN_SIMILARITY]
     if not hits:return {'mock_paper':'No supporting course material found. Build the index first.','total_marks':req.total_marks,'validated':False}
     slots=blueprint(req.total_marks)
-    prompt=('Use only COURSE CONTEXT. Return ONLY JSON {"questions":[...]}. Each question requires id, marks, bloom, text, answer, topic. '
+    prompt=(f'Use only COURSE CONTEXT. Return ONLY JSON {{"questions":[...]}} holding exactly {len(slots)} questions, '
+            f'with ids {", ".join(str(s["id"]) for s in slots)} — every one of them, in order, none skipped. '
+            'Each question requires id, marks, bloom, text, answer, topic. '
+            # Several blueprint slots carry identical marks and Bloom level, and
+            # a local model drops them: one run returned ids 1, 2, 3, 7 and the
+            # whole paper was rejected on the count. Naming the ids and keeping
+            # answers short enough to finish are what hold it to the blueprint.
+            'Several slots share the same marks and Bloom level; they still need separate questions on different topics. '
+            'Keep every answer under 80 words. '
             'Copy the blueprint id/marks/bloom exactly. For internal_choice=true add alternative:{text,answer}, at the same marks and Bloom level. '
-            'Do not repeat questions. Use distinct topics supported by context. This is a practice blueprint, not a verified official board format.\n'
+            'Do not repeat questions. Use distinct topics supported by context. This is a practice blueprint, not a verified official board format. '
+            # LaTeX inside a JSON string is what broke this: \frac is not a legal
+            # JSON escape, and the parser rejected otherwise good papers.
+            'Write mathematics as plain Unicode text (R₁, Ω, ×, ÷, √, ≈, θ, 10⁻³, a/b for fractions). Never use LaTeX, $ or backslashes.\n'
             +'BLUEPRINT:\n'+json.dumps(slots)+'\nCOURSE CONTEXT:\n'+build_context(hits))
     for attempt in range(2):
-        raw=await generate_text(settings.LLM_MOCK_MODEL,prompt,token_budget=8192)
+        raw=await generate_text(settings.LLM_MOCK_MODEL,prompt,token_budget=8192,json_mode=True)
         try:
             questions=validate_paper(raw,slots)
             break

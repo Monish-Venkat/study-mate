@@ -53,6 +53,31 @@ class Settings(BaseSettings):
     WHISPER_MODEL: str = 'base'
     ENABLE_GTTS: bool = False
     RATE_LIMIT_PER_MINUTE: int = 60
+    # Model used when a student asks for a language other than English.
+    #
+    # Empty, and a non-English request is answered in English with a short
+    # note saying why. The local models cannot do these languages, and the
+    # failure is invisible to every other check here. Measured directly
+    # against Ollama, asked to define refraction of light:
+    #
+    #   qwen2.5:3b  Hindi/Kannada/Tamil  right script, never the right term
+    #   qwen2.5:7b  Hindi                "rafphrekshan" transliterated, not
+    #                                    the term a Karnataka paper wants
+    #   qwen2.5:7b  Kannada/Tamil        fluent-looking nonsense
+    #
+    # Through the full prompt it was worse: a Hindi answer about refraction
+    # contained neither the word for refraction nor the word for light, and
+    # opened on an invented phrase about a reaction with carbonol. The
+    # grounding audit scored it 1.0, because the audit matches against English
+    # passages and cannot read Devanagari, so nothing in the pipeline catches
+    # it. A board answer in invented terminology scores zero; English the
+    # student can read is strictly better than that.
+    #
+    # Set this to a model that genuinely handles Indian languages to turn the
+    # selector on. "openrouter:<model>" and "vertex:<model>" both work, since
+    # split_provider() reads the prefix.
+    LLM_MULTILINGUAL_MODEL: str = ''
+
     LLM_MAIN_MODEL: str = 'qwen2.5:3b'
     LLM_SOCRATIC_MODEL: str = 'qwen2.5:3b'
     LLM_SMALL_MODEL: str = 'qwen2.5:3b'
@@ -87,6 +112,40 @@ class Settings(BaseSettings):
     ENABLE_GROUNDING_VERIFY: bool = True
     GROUNDING_VERIFY_LIMIT: int = 8
     GROUNDING_VERIFIER_MODEL: str = ''
+    # Withhold an answer whose claims mostly cannot be traced to the passages.
+    #
+    # OFF by default, because it was measured and it does not work. Over the
+    # full 174-item benchmark against the complete index (full_index_abstain):
+    #
+    #   config                  good refused   bad caught   trade
+    #   off                          0/142          0/12    --
+    #   weak only @0.15              5/142          4/12    1.2:1 against
+    #   0.05 / 0.05                 11/142          7/12    1.6:1 against
+    #   0.15 / 0.30                 17/142          7/12    2.4:1 against
+    #   0.35 / 0.60                 37/142          8/12    4.6:1 against
+    #
+    # At every setting it refuses more answerable questions than it catches
+    # unanswerable ones. The reason is in the distributions: answerable
+    # questions run from 0.00 to 1.00 (median 0.75) and unanswerable ones from
+    # 0.00 to 0.80 (median 0.33), so they overlap across the whole range and
+    # no threshold divides them. An earlier 39-item sample showed a clean
+    # separation only because it was too small to contain the overlap.
+    #
+    # The deeper reason is that grounded_fraction measures whether wording can
+    # be traced to a passage, not whether it is true. Once the full corpus was
+    # indexed, the Euglena answer scored 0.83 while still saying Euglena has
+    # two flagella, which it does not. A traceability score cannot carry a
+    # correctness decision.
+    #
+    # The machinery is kept, and evaluation/abstain_threshold.py reproduces
+    # the table above, so a better signal -- an entailment check over claims,
+    # say -- can be put behind the same gate and measured the same way.
+    ABSTAIN_ON_UNGROUNDED: bool = False
+    # Used only when the gate is switched on. The least-bad measured setting
+    # is weak-retrieval-only at 0.15, which still trades 5 good answers for 4
+    # bad ones; set ABSTAIN_GROUNDED_FRACTION to 0.0 to get that shape.
+    ABSTAIN_GROUNDED_FRACTION: float = 0.0
+    ABSTAIN_GROUNDED_FRACTION_WEAK: float = 0.15
     # CPU-only hosts generate in minutes, not seconds: an 8192-token mock paper
     # takes roughly half an hour at a few tokens per second.
     LLM_TIMEOUT_SECONDS: float = 3600.0

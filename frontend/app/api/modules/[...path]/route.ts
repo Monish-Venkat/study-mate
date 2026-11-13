@@ -1,8 +1,10 @@
 import {NextRequest,NextResponse} from 'next/server';
-const allowed:Record<string,string[]>={'mock-paper/score':['POST'],planner:['POST'],profile:['POST'],scores:['POST'],'memory/clear':['POST'],'voice/transcribe':['POST'],'voice/speak':['POST'],'teacher/analytics':['GET'],'teacher/syllabus':['POST'],'teacher/questions':['POST'],'teacher/upload':['POST']};
+const allowed:Record<string,string[]>={'mock-paper/score':['POST'],planner:['POST'],profile:['POST'],scores:['POST'],'memory/clear':['POST'],'voice/transcribe':['POST'],'voice/speak':['POST'],'teacher/analytics':['GET'],'teacher/syllabus':['POST'],'teacher/questions':['POST'],'teacher/upload':['POST'],'figures/search':['GET'],'mock-paper/blueprint':['GET']};
+// A figure id is the first 16 hex characters of the image's content hash.
+const FIGURE=/^figures\/[a-f0-9]{16}\.png$/;
 async function proxy(request:NextRequest,context:{params:Promise<{path:string[]}>}){
   const path=(await context.params).path.join('/');
-  const methods=/^teacher\/uploads\/[a-f0-9]{32}$/.test(path)?['GET']:allowed[path];
+  const methods=/^teacher\/uploads\/[a-f0-9]{32}$/.test(path)||FIGURE.test(path)?['GET']:allowed[path];
   if(!methods?.includes(request.method))return NextResponse.json({detail:'Unknown operation.'},{status:404});
   const headers:Record<string,string>={};
   if(request.headers.get('content-type'))headers['Content-Type']=request.headers.get('content-type')!;
@@ -15,8 +17,13 @@ async function proxy(request:NextRequest,context:{params:Promise<{path:string[]}
   try{
     const base=(process.env.BACKEND_URL||'http://127.0.0.1:8000').replace(/\/$/,'');
     const suffix=['planner','profile','scores'].includes(path)?'/':'';
-    const response=await fetch(`${base}/${path}${suffix}`,{method:request.method,headers,body,cache:'no-store',signal:AbortSignal.timeout(180000)});
+    // Figure search carries its query in the URL, so the search string has to
+    // survive the hop; every other allowed path ignores it.
+    const query=['figures/search','mock-paper/blueprint'].includes(path)?request.nextUrl.search:'';
+    const response=await fetch(`${base}/${path}${suffix}${query}`,{method:request.method,headers,body,cache:'no-store',signal:AbortSignal.timeout(180000)});
     if(response.headers.get('content-type')?.includes('audio/'))return new NextResponse(await response.arrayBuffer(),{status:response.status,headers:{'Content-Type':'audio/mpeg','Cache-Control':'no-store'}});
+    const type=response.headers.get('content-type')||'';
+    if(type.startsWith('image/'))return new NextResponse(await response.arrayBuffer(),{status:response.status,headers:{'Content-Type':type,'Cache-Control':'no-store'}});
     const data=await response.json();
     if(Array.isArray(data.detail))data.detail=data.detail.map((d:{loc?:string[];msg?:string})=>`${d.loc?.slice(1).join('.')}: ${d.msg}`).join('; ');
     return NextResponse.json(data,{status:response.status});

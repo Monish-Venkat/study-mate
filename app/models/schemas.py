@@ -22,6 +22,9 @@ class SocraticRequest(AskRequest):
 class SummaryRequest(CourseRequest):
     chapter: str = Field(min_length=1, max_length=200)
     summary_type: Literal['bullet_points', 'detailed', 'quick_revision'] = 'bullet_points'
+    # Revision notes offer the same language selector as the ask page, so the
+    # request has to be able to carry the choice.
+    language: Literal['en', 'hi', 'kn', 'ta', 'te', 'ml', 'mr', 'bn'] = 'en'
 
 class DiagramRequest(CourseRequest):
     topic: str = Field(min_length=1, max_length=200)

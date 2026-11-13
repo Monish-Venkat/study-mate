@@ -74,7 +74,7 @@ def build(per_cell, seed):
 
     for subject in SUBJECTS:
         for level in LEVELS:
-            records, origin = question_records(subject, level, 'KA')
+            records, origin, _ = question_records(subject, level, 'KA')
             pool = []
             for record in records:
                 text = ' '.join(record['text'].split())

@@ -12,6 +12,7 @@ from app.services.mock_engine import generate_mock
 from app.services.pyq_analysis import analyze
 from app.services.planner import save_plan
 from app.services.voice import transcribe_audio,synthesize
+from app.services.telegram_format import for_telegram,to_plain
 
 HELP='''StudyMate commands:
 /course physics PUC2 KA (also chemistry, mathematics, biology; PUC1; CBSE)
@@ -120,10 +121,14 @@ async def handle_update(update):
     except Exception as exc:
         from app.services.llm_client import GenerationUnavailable
         result=str(exc) if isinstance(exc,GenerationUnavailable) else 'This request could not be completed. Check the command format and service configuration. Use /help.'
-    for start in range(0,len(result),3500):await api('sendMessage',{'chat_id':chat,'text':result[start:start+3500]})
+    # Render Markdown and LaTeX to plain Unicode before delivery, and split on
+    # paragraph boundaries: the previous fixed-offset slicing cut formulas and
+    # numbered steps in half, and the raw markers reached students literally.
+    for part in for_telegram(result) or ['No response was produced.']:
+        await api('sendMessage',{'chat_id':chat,'text':part})
     profile=memory.profile(student_id,'telegram')
     if profile.get('voice') and settings.ENABLE_GTTS:
         try:
-            audio=await asyncio.to_thread(synthesize,result[:5000],profile.get('language','en'))
+            audio=await asyncio.to_thread(synthesize,to_plain(result)[:5000],profile.get('language','en'))
             await api('sendVoice',{'chat_id':str(chat)},files={'voice':('answer.mp3',audio,'audio/mpeg')})
         except Exception:await api('sendMessage',{'chat_id':chat,'text':'Audio output is unavailable; the text answer is above.'})

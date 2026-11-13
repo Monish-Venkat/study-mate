@@ -27,16 +27,65 @@ CITE = ('Cite evidence inline as [1], [2] immediately after the sentence it supp
         'Use only the numbered CONTEXT passages for facts. If the context does not cover part of '
         'the question, say plainly which part is missing instead of filling it from memory.\n')
 
+# Formulas are rendered as mathematics in the web client and converted to plain
+# symbols for Telegram, so the delimiters have to be predictable. Left to
+# itself the model mixes \[ \], \( \), code fences and bare backslash commands,
+# and the unrecognised ones reach the student as literal "\frac{1}{f}".
+FORMULA = ('Write every formula as LaTeX: $...$ for an inline symbol or quantity, and $$...$$ on '
+           'its own line for a displayed equation. For example $v = u + at$, or\n'
+           '$$\\frac{1}{f} = (n-1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$$\n'
+           'Never write a backslash command outside these delimiters, and never put a formula in '
+           'a code fence: it is rendered as mathematics, not as code. Define every symbol and '
+           'give SI units.\n'
+           # The rule above is read too broadly: "$Euglena$" came back in a
+           # Biology answer, where the delimiters render an organism's name as
+           # italic mathematics. Only quantities are mathematics.
+           'Use these delimiters for mathematics only. An ordinary word, a name, a term '
+           'of art or a unit spelled out is plain text, never wrapped in $.\n'
+           # A biology answer tried to draw the fluid mosaic model with
+           # $$\begin{array}{l}\text{Outer Layer:}\\ ...\end{array}$$. KaTeX
+           # cannot parse it, so it rendered as red raw LaTeX and the unbalanced
+           # $$ swallowed the sources line after it. Labelled diagrams come from
+           # the figure strip, not from the model.
+           'Never use a LaTeX environment: no \\begin{array}, \\begin{aligned}, \\begin{matrix} '
+           'or any other \\begin{...}. Never use LaTeX to lay out a diagram, a table or a list — '
+           'write those as ordinary numbered points.\n')
+
+# Both boards mark per visible step, so an answer written as continuous prose
+# throws away marks the same content would earn as separate points. The length
+# of the list is set by what the question is worth, not by the model's mood.
+POINTS = ('Structure the answer as a numbered list, one idea or one algebraic step per point, not '
+          'as continuous prose: both boards award marks per visible step, so a point that is not '
+          'separated is a mark the student does not get. Scale the list to what the question is '
+          'worth. A 1 or 2 mark question takes a direct statement and at most two points. A 3 '
+          'mark question takes three or four points. A 5 mark question takes five or more and '
+          'must show the full derivation, the labelled stages or the complete description that '
+          'earns the marks. Keep each point to one sentence or one step.\n'
+          # A small model told to produce "five or more" points pads to the count
+          # by restating what it has already said. An examiner awards a value point
+          # once, so a padded list earns no extra marks; it just reads as a loop.
+          # Observed: one answer repeated the same three sentences about Euglena
+          # three times over.
+          'Each point must state something the earlier points did not. Never restate an '
+          'earlier point in different words to reach a count. If the context yields fewer '
+          'distinct points than the mark value suggests, give the distinct ones and stop.\n')
+
 
 def ask_prompt(context, question, board, level, subject):
-    return (_frame(board, level, subject) + CITE +
-            'Answer in this order, omitting any part the context cannot support:\n'
-            '1. A one-sentence direct answer.\n'
-            '2. The explanation, in the terminology the prescribed textbook uses.\n'
-            '3. Any governing formula, with every symbol defined and SI units given.\n'
-            '4. A worked example or application only if the context contains one.\n'
-            'Write the depth a 5-mark answer would earn: complete but not padded. '
-            'Use plain prose and short paragraphs, not bullet fragments.\n'
+    return (_frame(board, level, subject) + CITE + POINTS + FORMULA +
+            'Open with a one-sentence direct answer, then the numbered points, covering in order: '
+            'the explanation in the terminology the prescribed textbook uses, then the governing '
+            'formula, then a worked example or application.\n'
+            # The formula and worked-example slots are a template, not part of
+            # what the student asked. Saying "the governing formula is not provided
+            # in the context" under a biology diagram question spends a numbered
+            # point on the absence of something nobody asked for. The citation
+            # rule's instruction to name missing material is about the question,
+            # not about these two slots.
+            'The formula and the worked example belong only to questions that have them. '
+            'Where the question or the context has no formula or no worked example, leave '
+            'that part out silently: do not write a point saying it is absent, not provided '
+            'or not applicable.\n'
             f'CONTEXT:\n{context}\nQUESTION: {question}')
 
 
@@ -186,3 +235,52 @@ def diagram_repair_prompt(code, problems, kind):
             '\n\nThe parser reported:\n' + '\n'.join(f'- {p}' for p in problems) +
             '\n\nRewrite it so it parses, keeping the same content.\n\n' + rules +
             '\nReturn only the corrected ```mermaid code fence.')
+
+
+# Answer language -----------------------------------------------------------
+#
+# The selector was accepted by the API, echoed in the response and ignored by
+# the model: asking in Hindi or Kannada returned 100% Latin-script English.
+# The instruction did exist, but it sat at the FRONT of the prompt, roughly
+# two thousand tokens before generation and followed by a wall of English
+# rules and English textbook passages. A small local model simply continues in
+# the language it has just been reading.
+#
+# So the directive is repeated here and appended AFTER the question, where it
+# is the last thing read, and a matching line goes in the system prompt. The
+# retrieved passages stay English regardless -- they are the evidence, not the
+# answer -- so the instruction has to say explicitly that the source language
+# is not the reply language.
+LANGUAGES = {'en': 'English', 'hi': 'Hindi', 'kn': 'Kannada', 'ta': 'Tamil',
+             'te': 'Telugu', 'ml': 'Malayalam', 'mr': 'Marathi', 'bn': 'Bengali'}
+
+SCRIPTS = {'hi': 'Devanagari', 'kn': 'Kannada', 'ta': 'Tamil', 'te': 'Telugu',
+           'ml': 'Malayalam', 'mr': 'Devanagari', 'bn': 'Bengali'}
+
+
+def language_directive(code: str) -> str:
+    """The closing instruction. Empty for English, which needs no restating."""
+    name = LANGUAGES.get(code)
+    if not name or code == 'en':
+        return ''
+    script = SCRIPTS.get(code, name)
+    return (
+        f'\n\nIMPORTANT: Write your entire answer in {name}, in the {script} script. '
+        f'The CONTEXT passages above are in English because that is the language of '
+        f'the prescribed textbook; they are the evidence, not the language of your '
+        f'reply. Translate your explanation into {name}.\n'
+        f'Keep unchanged, exactly as they appear: all mathematics and LaTeX between '
+        f'$ delimiters, chemical formulae, SI units and the [1] [2] citation markers. '
+        f'Where a technical term has no settled {name} equivalent, give the {name} '
+        f'term with the English in brackets after it.\n'
+        f'Do not answer in English.'
+    )
+
+
+def language_system(code: str) -> str:
+    """A system-prompt line reinforcing the same thing."""
+    name = LANGUAGES.get(code)
+    if not name or code == 'en':
+        return ''
+    return (f' The student has asked for answers in {name}: reply only in {name}, '
+            f'never in English, whatever language the supplied passages are in.')

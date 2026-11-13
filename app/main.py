@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from app.core.config import settings
-from app.routers import health, ask, socratic, summary, pyq, mock_paper, persona, learning, voice, teacher, telegram, diagram
+from app.routers import health, ask, socratic, summary, pyq, mock_paper, persona, learning, voice, teacher, telegram, diagram, figures
 from contextlib import asynccontextmanager, suppress
 import asyncio
 import time
@@ -22,7 +22,7 @@ async def lifespan(app):
                 await task
 
 app = FastAPI(title=settings.APP_NAME, version='4.1.0', lifespan=lifespan)
-for router in (health, ask, socratic, summary, pyq, mock_paper, persona, learning, voice, teacher, telegram, diagram):
+for router in (health, ask, socratic, summary, pyq, mock_paper, persona, learning, voice, teacher, telegram, diagram, figures):
     app.include_router(router.router)
 
 @app.exception_handler(GenerationUnavailable)

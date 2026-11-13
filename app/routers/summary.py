@@ -5,5 +5,5 @@ router = APIRouter(tags=['summary'])
 @router.post('/summary/')
 async def summary(req: SummaryRequest):
     persona = {}
-    ans = await run_summary(req.chapter, req.subject, req.level, req.board, req.summary_type, req.persona_id, persona)
+    ans = await run_summary(req.chapter, req.subject, req.level, req.board, req.summary_type, req.persona_id, persona, language=req.language)
     return {'summary': ans, 'persona': persona}
